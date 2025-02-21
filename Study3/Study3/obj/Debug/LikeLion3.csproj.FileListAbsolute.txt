@@ -1,7 +1,0 @@
-C:\LikeLion\LikeLion\Study3\Study3\bin\Debug\Study3.exe.config
-C:\LikeLion\LikeLion\Study3\Study3\bin\Debug\Study3.exe
-C:\LikeLion\LikeLion\Study3\Study3\bin\Debug\Study3.pdb
-C:\LikeLion\LikeLion\Study3\Study3\obj\Debug\LikeLion3.csproj.AssemblyReference.cache
-C:\LikeLion\LikeLion\Study3\Study3\obj\Debug\LikeLion3.csproj.CoreCompileInputs.cache
-C:\LikeLion\LikeLion\Study3\Study3\obj\Debug\Study3.exe
-C:\LikeLion\LikeLion\Study3\Study3\obj\Debug\Study3.pdb
