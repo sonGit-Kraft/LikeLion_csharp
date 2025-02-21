@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LikeLion1
+namespace LikeLion2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // 출력
-            Console.WriteLine("깃허브 연결하기");
+            int age; // 정수형 변수 선언
+            age = 25; // 변수 값 저장
+
+            Console.WriteLine(age); // 변수에 저장된 갑 출력
         }
     }
 }
