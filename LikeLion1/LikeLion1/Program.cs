@@ -10,7 +10,7 @@ namespace LikeLion1
     {
         static void Main(string[] args)
         {
-            // 출력 
+            // 출력  
             Console.WriteLine("깃허브 연결하기");
         }
     }

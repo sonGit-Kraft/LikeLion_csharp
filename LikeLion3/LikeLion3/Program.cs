@@ -14,7 +14,7 @@ namespace LikeLion3
             double att = 56.7; // 실수형 리터럴
             string name = "???"; // 문자열 리터럴
             char grade = 'S'; // 문자형 리터럴
-
+             
             // 출력
             Console.WriteLine("캐릭터");
             Console.WriteLine("체력: " + hp);
