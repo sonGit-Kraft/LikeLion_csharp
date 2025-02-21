@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Study3
+namespace LikeLion3
 {
     class Program
     {
@@ -16,10 +16,11 @@ namespace Study3
             char grade = 'S'; // 문자형 리터럴
 
             // 출력
-            Console.WriteLine(hp);
-            Console.WriteLine(att);
-            Console.WriteLine(name);
-            Console.WriteLine(grade);
+            Console.WriteLine("캐릭터");
+            Console.WriteLine("체력: " + hp);
+            Console.WriteLine("공격력: " + att);
+            Console.WriteLine("이름: " + name);
+            Console.WriteLine("등급: " + grade);
         }
     }
 }
