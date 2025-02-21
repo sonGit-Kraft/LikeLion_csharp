@@ -10,33 +10,23 @@ namespace LikeLion5
     {
         static void Main(string[] args)
         {
-            // 변수 선언과 초기화를 한번에 수행
-            int score = 100; // 정수형 변수 선언과 동시에 100으로 초기화
-            double temperature = 36.5; // 실수형 변수 선언과 동시에 36.5로 초기화
-            string city = "Seoul"; // 문자열 변수 선언과 동시에 초기화
+            // 사용자 입력을 문자열로 받기
+            Console.Write("이름을 입력하세요: ");
+            string userName = Console.ReadLine(); // 사용자로부터 입력 받기
 
-            // 출력
-            Console.WriteLine(score);
-            Console.WriteLine(temperature);
-            Console.WriteLine(city);
+            Console.WriteLine($"안녕하세요, {userName}님!"); // 입력값 출력
 
-            // 같은 데이터 타입의 변수를 쉼표로 구분하여 선언
-            int x = 10, y = 20, z = 30;
+            // 문자열을 정수로 변환
+            // Console.ReadLine()은 항상 문자열로 입력을 받으므로
+            // 숫자 등 다른 데이터 형식으로 사용할 경우 변환이 필요
+            Console.Write("나이를 입력하세요: ");
+            string input = Console.ReadLine(); // 입력
+            int age = int.Parse(input); // string -> int (문자열을 정수로 변환)
 
-            // 출력
-            Console.WriteLine(x);
-            Console.WriteLine(y);
-            Console.WriteLine(z);
-
-            // 상수 선언
-            const double Pi = 3.14159; // 실수형 상수 선언 및 초기화
-            const int MaxScore = 100; // 정수형 상수 선언 및 초기화
-
-            // Pi = 3.14; -> 오류 발생
-
-            // 출력
-            Console.WriteLine("Pi: " + Pi);
-            Console.WriteLine("Max Score" + MaxScore);
+            // 다양한 출력 방식
+            Console.WriteLine($"내년에는 {age + 1}살이 되겠군요!");
+            Console.WriteLine("올해는 " + age + "살이군요!");
+            Console.WriteLine("올해는 {0}살이군요!", age);
         }
     }
 }
