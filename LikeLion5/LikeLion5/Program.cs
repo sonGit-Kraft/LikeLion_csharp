@@ -27,6 +27,16 @@ namespace LikeLion5
             Console.WriteLine(x);
             Console.WriteLine(y);
             Console.WriteLine(z);
+
+            // 상수 선언
+            const double Pi = 3.14159; // 실수형 상수 선언 및 초기화
+            const int MaxScore = 100; // 정수형 상수 선언 및 초기화
+
+            // Pi = 3.14; -> 오류 발생
+
+            // 출력
+            Console.WriteLine("Pi: " + Pi);
+            Console.WriteLine("Max Score" + MaxScore);
         }
     }
 }
