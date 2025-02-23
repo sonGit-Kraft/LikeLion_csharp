@@ -11,6 +11,7 @@ namespace TodayTask2
         static void Main(string[] args)
         {
             // 로스트 아크 활동창 입력후 출력
+
             float ruin;
             float card;
             float awakening;
