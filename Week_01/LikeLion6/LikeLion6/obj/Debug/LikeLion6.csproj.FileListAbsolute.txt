@@ -5,3 +5,10 @@ C:\LikeLion\LikeLion\LikeLion6\LikeLion6\obj\Debug\LikeLion6.csproj.AssemblyRefe
 C:\LikeLion\LikeLion\LikeLion6\LikeLion6\obj\Debug\LikeLion6.csproj.CoreCompileInputs.cache
 C:\LikeLion\LikeLion\LikeLion6\LikeLion6\obj\Debug\LikeLion6.exe
 C:\LikeLion\LikeLion\LikeLion6\LikeLion6\obj\Debug\LikeLion6.pdb
+C:\LikeLion\LikeLion\Week_01\LikeLion6\LikeLion6\bin\Debug\LikeLion6.exe.config
+C:\LikeLion\LikeLion\Week_01\LikeLion6\LikeLion6\bin\Debug\LikeLion6.exe
+C:\LikeLion\LikeLion\Week_01\LikeLion6\LikeLion6\bin\Debug\LikeLion6.pdb
+C:\LikeLion\LikeLion\Week_01\LikeLion6\LikeLion6\obj\Debug\LikeLion6.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\Week_01\LikeLion6\LikeLion6\obj\Debug\LikeLion6.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\Week_01\LikeLion6\LikeLion6\obj\Debug\LikeLion6.exe
+C:\LikeLion\LikeLion\Week_01\LikeLion6\LikeLion6\obj\Debug\LikeLion6.pdb

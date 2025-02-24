@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +29,34 @@ namespace LikeLion5
             Console.WriteLine($"내년에는 {age + 1}살이 되겠군요!");
             Console.WriteLine("올해는 " + age + "살이군요!");
             Console.WriteLine("올해는 {0}살이군요!", age);
+
+            // 2진수를 정수로 변환
+            Console.Write("2진수를 입력하세요: ");
+            string binaryInput = Console.ReadLine(); // 2진수를 문자열로 입력
+            int decimalValue = Convert.ToInt32(binaryInput, 2); // 2진수 -> 10진수 변환
+
+            // 정수를 2진수로 변환
+            string binaryOutput = Convert.ToString(decimalValue, 2); // 10진수 -> 2진수 변환
+
+            Console.WriteLine($"입력한 2진수: {binaryInput}");
+            Console.WriteLine($"10진수로 변환: {decimalValue}");
+            Console.WriteLine($"다시 2진수로 변환: {binaryOutput}");
+
+            // var를 사용하여 변수 선언
+            var Name = "Alice"; // 문자열로 추론
+            var Age = 25; // 정수로 추론
+            var isStudent = true; // 논리값으로 추론
+
+            Console.WriteLine($"이름: {Name}, 나이: {Age}, 학생 여부: {isStudent}");
+
+            // default 키워드를 사용한 기본값 설정
+            int defaultInt = default; // 기본값: 0
+            string defaultString = default; // 기본값: null
+            bool defaultBool = default; // 기본값: false
+
+            Console.WriteLine($"정수 기본값: {defaultInt}");
+            Console.WriteLine($"문자열 기본값: {defaultString}");
+            Console.WriteLine($"논리값 기본값: {defaultBool}");
         }
     }
 }
