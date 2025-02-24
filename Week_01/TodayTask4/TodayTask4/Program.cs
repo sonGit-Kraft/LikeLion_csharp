@@ -25,7 +25,7 @@ namespace TodayTask4
             Average = (float)Sum / 3; // 평균
 
             Console.WriteLine("총점 : " + Sum);
-            Console.WriteLine("평균 : " + Average.ToString("F2"));
+            Console.WriteLine("평균 : " + Average.ToString("F2")); // ToString("F2"): 소수점 2번째 자리까지
 
             Console.WriteLine();
 
