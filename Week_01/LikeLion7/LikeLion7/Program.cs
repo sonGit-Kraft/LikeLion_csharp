@@ -24,7 +24,7 @@ namespace LikeLion7
 
             string GameID = "멋사";
 
-            if (string.Compare(GameID, "멋사") == 0) // 문자열 비교 함수 string.Compare
+            if (string.Compare(GameID, "멋사") == 0) // 문자열 비교 함수 string.Compare()
             {
                 Console.WriteLine("아이디가 일치합니다.");
             }
