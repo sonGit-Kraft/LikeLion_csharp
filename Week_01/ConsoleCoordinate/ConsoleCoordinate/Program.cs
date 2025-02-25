@@ -117,11 +117,13 @@ namespace ConsoleCoordinate
                 Console.SetCursorPosition(user1.xpos, user1.ypos);
                 Console.WriteLine("😀");
 
+                // 플레이어가 사과를 먹었을 때 = 플레이어가 사과 위치일 떄
                 if (user1.xpos == apple.xpos && user1.ypos == apple.ypos)
                 {
-                    user1.score++;
-                    apple.xpos = rnd.Next(1, width);
-                    apple.ypos = rnd.Next(1, height);
+                    user1.score++; // 점수 증가
+
+                    // 사과 위치 재설정
+                    apple.xpos = rnd.Next(1, width); apple.ypos = rnd.Next(1, height);
                     Console.SetCursorPosition(apple.xpos, apple.ypos);
                     Console.WriteLine("🍎");
                 }
