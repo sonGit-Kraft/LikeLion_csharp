@@ -63,7 +63,7 @@ namespace ConsoleCoordinate
 
             // 상단 테두리
             Console.SetCursorPosition(0, 0);
-            Console.Write("┏" + new string('━', width) + "┓");
+            Console.Write("┏" + new string('━', width) + "┓"); // new string('━', width): '━'를 width만큼 반복하여 생성
 
             // 중간 테두리
             for (int i = 1; i <= height; i++)
@@ -78,9 +78,10 @@ namespace ConsoleCoordinate
 
             // 플레이어, 사과 좌표 설정
             Random rnd = new Random();
-            Player user1 = new Player { xpos = 1, ypos = 1, score = 0 };
-            Apple apple = new Apple { xpos = rnd.Next(1, width), ypos = rnd.Next(1, height) };
+            Player user1 = new Player { xpos = 1, ypos = 1, score = 0 }; // 플레이어 객체 생성
+            Apple apple = new Apple { xpos = rnd.Next(1, width), ypos = rnd.Next(1, height) }; // 사과 객체 생성
 
+            // 사과 출력
             Console.SetCursorPosition(apple.xpos, apple.ypos);
             Console.WriteLine("🍎");
 
@@ -132,7 +133,7 @@ namespace ConsoleCoordinate
             Console.SetCursorPosition(0, 0);
             Console.WriteLine($"⏳ 남은 시간: {remainingTime}초 ");
 
-            remainingTime--;
+            remainingTime--; // 전체 시간 감소
 
             if (remainingTime < 0)
             {
