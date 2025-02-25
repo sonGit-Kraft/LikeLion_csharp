@@ -35,25 +35,15 @@ namespace TodayTask6
             int score = int.Parse(Console.ReadLine());
 
             if (score >= 90)
-            {
                 Console.WriteLine("A 학점");
-            }
             else if (score < 90 && score >= 80)
-            {
                 Console.WriteLine("B 학점");
-            }
             else if (score < 80 && score >= 70)
-            {
                 Console.WriteLine("C 학점");
-            }
             else if (score < 70 && score >= 60)
-            {
                 Console.WriteLine("D 학점");
-            }
             else if (score < 60)
-            {
                 Console.WriteLine("F 학점");
-            }
 
             Console.WriteLine();
 
