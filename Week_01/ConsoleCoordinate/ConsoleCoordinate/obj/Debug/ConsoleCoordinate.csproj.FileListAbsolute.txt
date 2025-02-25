@@ -1,0 +1,7 @@
+C:\LikeLion\LikeLion\ConsoleCoordinate\ConsoleCoordinate\bin\Debug\ConsoleCoordinate.exe.config
+C:\LikeLion\LikeLion\ConsoleCoordinate\ConsoleCoordinate\bin\Debug\ConsoleCoordinate.exe
+C:\LikeLion\LikeLion\ConsoleCoordinate\ConsoleCoordinate\bin\Debug\ConsoleCoordinate.pdb
+C:\LikeLion\LikeLion\ConsoleCoordinate\ConsoleCoordinate\obj\Debug\ConsoleCoordinate.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\ConsoleCoordinate\ConsoleCoordinate\obj\Debug\ConsoleCoordinate.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\ConsoleCoordinate\ConsoleCoordinate\obj\Debug\ConsoleCoordinate.exe
+C:\LikeLion\LikeLion\ConsoleCoordinate\ConsoleCoordinate\obj\Debug\ConsoleCoordinate.pdb

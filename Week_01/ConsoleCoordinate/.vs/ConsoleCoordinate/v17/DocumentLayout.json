@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\LikeLion\\LikeLion\\ConsoleCoordinate\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1E238CF1-2CB5-42F6-B54A-02E40996E2FB}|ConsoleCoordinate\\ConsoleCoordinate.csproj|c:\\likelion\\likelion\\consolecoordinate\\consolecoordinate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E238CF1-2CB5-42F6-B54A-02E40996E2FB}|ConsoleCoordinate\\ConsoleCoordinate.csproj|solutionrelative:consolecoordinate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\LikeLion\\LikeLion\\ConsoleCoordinate\\ConsoleCoordinate\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleCoordinate\\Program.cs",
+              "ToolTip": "C:\\LikeLion\\LikeLion\\ConsoleCoordinate\\ConsoleCoordinate\\Program.cs",
+              "RelativeToolTip": "ConsoleCoordinate\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T06:10:40.336Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
