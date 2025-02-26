@@ -31,6 +31,7 @@ namespace Bingo
             (nums[a], nums[b]) = (nums[b], nums[a]); 
             */
 
+            // 1차원 배열을 이용한 빙고
             int[] iArray = new int[25];
 
             for (int i = 0; i < 25; i++)

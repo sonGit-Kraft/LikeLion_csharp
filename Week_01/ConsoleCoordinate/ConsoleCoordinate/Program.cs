@@ -96,7 +96,7 @@ namespace ConsoleCoordinate
              * state: 콜백 메서드에 전달할 데이터 (보통 null)
              * dueTime: 첫 실행 지연 시간 (0이면 즉시 실행, ms 단위)
              * period: 반복 실행 간격 (1000이면 1초마다 실행, ms 단위)
-             * https://learn.microsoft.com/ko-kr/dotnet/api/system.threading.timer.-ctor?view=net-8.0
+             * 참고: https://learn.microsoft.com/ko-kr/dotnet/api/system.threading.timer.-ctor?view=net-8.0
             */
 
             while (true)
