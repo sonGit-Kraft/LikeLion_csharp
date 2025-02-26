@@ -13,11 +13,13 @@ namespace ConsoleCoordinate
         public int ypos { get; set; }
         public int score { get; set; }
     }
+
     class Apple
     {
         public int xpos { get; set; }
         public int ypos { get; set; }
     }
+
     class Program
     {
         static int remainingTime = 60; // 남은 시간 (초)
@@ -85,8 +87,18 @@ namespace ConsoleCoordinate
             Console.SetCursorPosition(apple.xpos, apple.ypos);
             Console.WriteLine("🍎");
 
-            // 타이머 시작 (1초마다 TimerCallback 실행)
-            timer = new Timer(TimerCallback, null, 0, 1000); // Timer 객체 생성
+            // 타이머 시작 (1초마다 TimerCallback 함수(메서드) 실행)
+            timer = new Timer(TimerCallback, null, 0, 1000); // Timer 객체 생성 (생성자 호출)
+
+
+            /* Timer 생성자의 일반적인 사용 방식
+             * public Timer(TimerCallback callback, object? state, int dueTime, int period);
+             * callback: 주기적으로 실행할 콜백 메서드
+             * state: 콜백 메서드에 전달할 데이터 (보통 null)
+             * dueTime: 첫 실행 지연 시간 (0이면 즉시 실행, ms 단위)
+             * period: 반복 실행 간격 (1000이면 1초마다 실행, ms 단위)
+             * https://learn.microsoft.com/ko-kr/dotnet/api/system.threading.timer.-ctor?view=net-8.0
+            */
 
             while (true)
             {
@@ -100,20 +112,32 @@ namespace ConsoleCoordinate
 
                 // 이전 위치 지우기
                 Console.SetCursorPosition(user1.xpos, user1.ypos);
-                Console.WriteLine(" "); 
+                Console.WriteLine(" ");
 
                 switch (keyInfo.Key)
                 {
-                    case ConsoleKey.UpArrow: if (user1.ypos > 1) user1.ypos--; break; //위
-                    case ConsoleKey.DownArrow: if (user1.ypos < height) user1.ypos++; break; // 아래
-                    case ConsoleKey.LeftArrow: if (user1.xpos > 1) user1.xpos--; break; // 왼쪽
-                    case ConsoleKey.RightArrow: if (user1.xpos < width) user1.xpos++; break; // 오른쪽
+                    case ConsoleKey.UpArrow: //위
+                        if (user1.ypos > 1)
+                            user1.ypos--;
+                        break; 
+                    case ConsoleKey.DownArrow: // 아래
+                        if (user1.ypos < height)
+                            user1.ypos++;
+                        break; 
+                    case ConsoleKey.LeftArrow: // 왼쪽
+                        if (user1.xpos > 1)
+                            user1.xpos--;
+                        break; 
+                    case ConsoleKey.RightArrow: // 오른쪽
+                        if (user1.xpos < width)
+                            user1.xpos++;
+                        break; 
                     case ConsoleKey.Escape: // ESC 입력시 종료
                         Console.WriteLine("게임을 종료합니다.");
                         return;
                 }
 
-                // 이동 후 플레이어 위치
+                // 이동 후 플레이어 출력
                 Console.SetCursorPosition(user1.xpos, user1.ypos);
                 Console.WriteLine("😀");
 
