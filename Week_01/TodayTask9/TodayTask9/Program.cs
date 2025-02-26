@@ -56,7 +56,6 @@ namespace TodayTask9
             foreach (int num in arr1)
                 Console.Write($"{num} ");
 
-
             Console.WriteLine("\n\n==================================\n");
 
             // 문제 2
