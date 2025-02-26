@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace TodayTask9
 {
-    
-
     class Program
     {
         static int Q7()
