@@ -90,7 +90,6 @@ namespace ConsoleCoordinate
             // 타이머 시작 (1초마다 TimerCallback 함수(메서드) 실행)
             timer = new Timer(TimerCallback, null, 0, 1000); // Timer 객체 생성 (생성자 호출)
 
-
             /* Timer 생성자의 일반적인 사용 방식
              * public Timer(TimerCallback callback, object? state, int dueTime, int period);
              * callback: 주기적으로 실행할 콜백 메서드
