@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\LikeLion\\LikeLion\\TodayTask9\\",
+  "WorkspaceRootPath": "C:\\LikeLion\\LikeLion\\Week_01\\TodayTask9\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF0C17DA-1F65-4F5D-A266-7C3BD1BA2451}|TodayTask9\\TodayTask9.csproj|c:\\likelion\\likelion\\todaytask9\\todaytask9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF0C17DA-1F65-4F5D-A266-7C3BD1BA2451}|TodayTask9\\TodayTask9.csproj|solutionrelative:todaytask9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\LikeLion\\LikeLion\\Week_01\\TodayTask9\\TodayTask9\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TodayTask9\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\LikeLion\\LikeLion\\TodayTask9\\TodayTask9\\Program.cs",
+              "DocumentMoniker": "C:\\LikeLion\\LikeLion\\Week_01\\TodayTask9\\TodayTask9\\Program.cs",
               "RelativeDocumentMoniker": "TodayTask9\\Program.cs",
-              "ToolTip": "C:\\LikeLion\\LikeLion\\TodayTask9\\TodayTask9\\Program.cs*",
-              "RelativeToolTip": "TodayTask9\\Program.cs*",
-              "ViewState": "AgIAACgAAAAAAAAAAAAQwEAAAAAbAAAAAAAAAA==",
+              "ToolTip": "C:\\LikeLion\\LikeLion\\Week_01\\TodayTask9\\TodayTask9\\Program.cs",
+              "RelativeToolTip": "TodayTask9\\Program.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAH8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-26T07:09:19.12Z",
               "EditorCaption": ""

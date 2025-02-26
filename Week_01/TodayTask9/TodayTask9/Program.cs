@@ -6,8 +6,49 @@ using System.Threading.Tasks;
 
 namespace TodayTask9
 {
+    
+
     class Program
     {
+        static int Q7()
+        {
+            Console.Write("두 수 입력: ");
+            string input = Console.ReadLine();
+            string[] number = input.Split(' ');
+            int a = int.Parse(number[0]);
+            int b = int.Parse(number[1]);
+
+            return a + b;
+        }
+
+        static int Q8()
+        {
+            Console.Write("문자열 입력: ");
+            string str = Console.ReadLine();
+            
+            return str.Length;
+        }
+
+        static int Q9()
+        {
+            int[] arr9 = new int[3];
+
+            Console.Write("세 개의 정수 입력: ");
+            string input = Console.ReadLine();
+            string[] inputNum = input.Split(' ');
+
+            for (int i = 0; i < 3; i++)
+                arr9[i] = int.Parse(inputNum[i]);
+
+            int Max = arr9[0];
+
+            for (int i = 1; i < 3; i++)
+                if (arr9[i] > Max)
+                    Max = arr9[i];
+
+            return Max;
+        }
+
         static void Main(string[] args)
         {
             // 문제 1
@@ -69,7 +110,6 @@ namespace TodayTask9
                 index++;
             }
 
-
             Console.WriteLine("\n\n==================================\n");
 
             // 문제 6
@@ -84,43 +124,21 @@ namespace TodayTask9
             // 문제 7
             Console.WriteLine("문제 7");
 
-            Console.Write("두 수 입력: ");
-            input = Console.ReadLine();
-            string[] number = input.Split(' ');
-            int a = int.Parse(number[0]);
-            int b = int.Parse(number[1]);
-            Console.WriteLine($"{a}와 {b}의 합: {a+b}");
+            Console.WriteLine($"두 수의 합: {Q7()}");
 
             Console.WriteLine("\n==================================\n");
 
             // 문제 8
             Console.WriteLine("문제 8");
 
-            Console.Write("문자열 입력: ");
-            string str = Console.ReadLine();
-            Console.Write("문자열 길이: " + str.Length);
+            Console.Write("문자열 길이: " + Q8());
 
             Console.WriteLine("\n\n==================================\n");
 
             // 문제 9
             Console.WriteLine("문제 9");
 
-            int[] arr9 = new int[3];
-
-            Console.Write("세 개의 정수 입력: ");
-            input = Console.ReadLine();
-            string[] inputNum = input.Split(' ');
-            
-            for (int i = 0; i < 3; i++)
-                arr9[i] = int.Parse(inputNum[i]);
-
-            int Max = arr9[0];
-
-            for (int i = 1; i < 3; i++)
-                if (arr9[i] > Max)
-                    Max = arr9[i];
-
-            Console.WriteLine("가장 큰 수: " + Max);
+            Console.WriteLine("가장 큰 수: " + Q9());
         }
     }
 }

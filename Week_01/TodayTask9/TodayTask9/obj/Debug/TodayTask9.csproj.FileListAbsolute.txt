@@ -5,3 +5,10 @@ C:\LikeLion\LikeLion\TodayTask9\TodayTask9\obj\Debug\TodayTask9.csproj.AssemblyR
 C:\LikeLion\LikeLion\TodayTask9\TodayTask9\obj\Debug\TodayTask9.csproj.CoreCompileInputs.cache
 C:\LikeLion\LikeLion\TodayTask9\TodayTask9\obj\Debug\TodayTask9.exe
 C:\LikeLion\LikeLion\TodayTask9\TodayTask9\obj\Debug\TodayTask9.pdb
+C:\LikeLion\LikeLion\Week_01\TodayTask9\TodayTask9\obj\Debug\TodayTask9.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\Week_01\TodayTask9\TodayTask9\obj\Debug\TodayTask9.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\Week_01\TodayTask9\TodayTask9\obj\Debug\TodayTask9.exe
+C:\LikeLion\LikeLion\Week_01\TodayTask9\TodayTask9\obj\Debug\TodayTask9.pdb
+C:\LikeLion\LikeLion\Week_01\TodayTask9\TodayTask9\bin\Debug\TodayTask9.exe.config
+C:\LikeLion\LikeLion\Week_01\TodayTask9\TodayTask9\bin\Debug\TodayTask9.exe
+C:\LikeLion\LikeLion\Week_01\TodayTask9\TodayTask9\bin\Debug\TodayTask9.pdb
