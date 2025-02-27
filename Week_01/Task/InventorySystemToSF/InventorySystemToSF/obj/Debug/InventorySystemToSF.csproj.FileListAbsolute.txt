@@ -1,0 +1,7 @@
+C:\LikeLion\LikeLion\InventorySystemToSF\InventorySystemToSF\bin\Debug\InventorySystemToSF.exe.config
+C:\LikeLion\LikeLion\InventorySystemToSF\InventorySystemToSF\bin\Debug\InventorySystemToSF.exe
+C:\LikeLion\LikeLion\InventorySystemToSF\InventorySystemToSF\bin\Debug\InventorySystemToSF.pdb
+C:\LikeLion\LikeLion\InventorySystemToSF\InventorySystemToSF\obj\Debug\InventorySystemToSF.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\InventorySystemToSF\InventorySystemToSF\obj\Debug\InventorySystemToSF.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\InventorySystemToSF\InventorySystemToSF\obj\Debug\InventorySystemToSF.exe
+C:\LikeLion\LikeLion\InventorySystemToSF\InventorySystemToSF\obj\Debug\InventorySystemToSF.pdb

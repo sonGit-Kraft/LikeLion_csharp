@@ -1,0 +1,7 @@
+C:\LikeLion\LikeLion\TodayTask10\TodayTask10\bin\Debug\TodayTask10.exe.config
+C:\LikeLion\LikeLion\TodayTask10\TodayTask10\bin\Debug\TodayTask10.exe
+C:\LikeLion\LikeLion\TodayTask10\TodayTask10\bin\Debug\TodayTask10.pdb
+C:\LikeLion\LikeLion\TodayTask10\TodayTask10\obj\Debug\TodayTask10.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\TodayTask10\TodayTask10\obj\Debug\TodayTask10.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\TodayTask10\TodayTask10\obj\Debug\TodayTask10.exe
+C:\LikeLion\LikeLion\TodayTask10\TodayTask10\obj\Debug\TodayTask10.pdb

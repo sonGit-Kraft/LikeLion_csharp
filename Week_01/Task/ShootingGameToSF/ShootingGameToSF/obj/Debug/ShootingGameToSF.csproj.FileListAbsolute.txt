@@ -1,0 +1,7 @@
+C:\LikeLion\LikeLion\ShootingGameToSF\ShootingGameToSF\bin\Debug\ShootingGameToSF.exe.config
+C:\LikeLion\LikeLion\ShootingGameToSF\ShootingGameToSF\bin\Debug\ShootingGameToSF.exe
+C:\LikeLion\LikeLion\ShootingGameToSF\ShootingGameToSF\bin\Debug\ShootingGameToSF.pdb
+C:\LikeLion\LikeLion\ShootingGameToSF\ShootingGameToSF\obj\Debug\ShootingGameToSF.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\ShootingGameToSF\ShootingGameToSF\obj\Debug\ShootingGameToSF.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\ShootingGameToSF\ShootingGameToSF\obj\Debug\ShootingGameToSF.exe
+C:\LikeLion\LikeLion\ShootingGameToSF\ShootingGameToSF\obj\Debug\ShootingGameToSF.pdb
