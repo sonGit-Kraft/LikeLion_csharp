@@ -1,0 +1,14 @@
+C:\LikeLion\LikeLion\ShootingGameV2\ShootingGameV2\bin\Debug\ShootingGameV2.exe.config
+C:\LikeLion\LikeLion\ShootingGameV2\ShootingGameV2\bin\Debug\ShootingGameV2.exe
+C:\LikeLion\LikeLion\ShootingGameV2\ShootingGameV2\bin\Debug\ShootingGameV2.pdb
+C:\LikeLion\LikeLion\ShootingGameV2\ShootingGameV2\obj\Debug\ShootingGameV2.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\ShootingGameV2\ShootingGameV2\obj\Debug\ShootingGameV2.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\ShootingGameV2\ShootingGameV2\obj\Debug\ShootingGameV2.exe
+C:\LikeLion\LikeLion\ShootingGameV2\ShootingGameV2\obj\Debug\ShootingGameV2.pdb
+C:\LikeLion\LikeLion\Week_01\Practice\ShootingGameV2\ShootingGameV2\bin\Debug\ShootingGameV2.exe.config
+C:\LikeLion\LikeLion\Week_01\Practice\ShootingGameV2\ShootingGameV2\bin\Debug\ShootingGameV2.exe
+C:\LikeLion\LikeLion\Week_01\Practice\ShootingGameV2\ShootingGameV2\bin\Debug\ShootingGameV2.pdb
+C:\LikeLion\LikeLion\Week_01\Practice\ShootingGameV2\ShootingGameV2\obj\Debug\ShootingGameV2.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\Week_01\Practice\ShootingGameV2\ShootingGameV2\obj\Debug\ShootingGameV2.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\Week_01\Practice\ShootingGameV2\ShootingGameV2\obj\Debug\ShootingGameV2.exe
+C:\LikeLion\LikeLion\Week_01\Practice\ShootingGameV2\ShootingGameV2\obj\Debug\ShootingGameV2.pdb

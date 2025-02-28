@@ -1,0 +1,7 @@
+C:\LikeLion\LikeLion\MyConsoleGame\MyConsoleGame\bin\Debug\MyConsoleGame.exe.config
+C:\LikeLion\LikeLion\MyConsoleGame\MyConsoleGame\bin\Debug\MyConsoleGame.exe
+C:\LikeLion\LikeLion\MyConsoleGame\MyConsoleGame\bin\Debug\MyConsoleGame.pdb
+C:\LikeLion\LikeLion\MyConsoleGame\MyConsoleGame\obj\Debug\MyConsoleGame.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\MyConsoleGame\MyConsoleGame\obj\Debug\MyConsoleGame.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\MyConsoleGame\MyConsoleGame\obj\Debug\MyConsoleGame.exe
+C:\LikeLion\LikeLion\MyConsoleGame\MyConsoleGame\obj\Debug\MyConsoleGame.pdb
