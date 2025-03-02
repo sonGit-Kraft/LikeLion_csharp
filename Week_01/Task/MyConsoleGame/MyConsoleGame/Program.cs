@@ -261,8 +261,8 @@ namespace MyConsoleGame
                 new int[] { 2, 0 }    // 오른쪽
             };
 
-            // tasks는 각 offset에 대해 비동기 작업을 실행하는 Task들의 컬렉션
-            // 각 비동기 작업에 해당하는 Task 객체들이 즉시 저장
+            // tasks는 각 offset에 대해 비동기 작업을 실행하는 Task들의 컬렉션 (각 비동기 작업에 해당하는 Task 객체들이 즉시 저장)
+            // 비동기 방식으로 작업을 처리하는 경우, 각 offset에 대한 작업이 동시에 진행
             // 비동기 작업의 완료 시점은 Task 객체 자체가 관리하며, 작업이 완료되면 해당 Task의 상태가 완료됨으로 바뀝
             // offsets.Select(...): offsets 컬렉션에 대해 각 항목에 대해 변환 작업을 수행
             // async offset => {...}: 각 offset 항목마다 비동기 작업을 처리하는 람다 함수를 정의 (이 람다는 비동기 작업을 수행하고 결과를 반환하는 역할)
@@ -302,9 +302,10 @@ namespace MyConsoleGame
                     Program.map.Buffer[ey, ex / 2] = "  ";
             });
 
-            await Task.WhenAll(tasks); // 모든 폭발 처리가 끝날 때까지 대기
+            await Task.WhenAll(tasks); // 모든 비동기 작업이 끝날 때까지 대기
+            // 비동기 작업을 사용하지 않는다면 동시 처리가 이루어지지 않을 가능성이 있음
+            // 한 작업이 끝나야 다음 작업이 진행되기 때문에, 여러 작업이 동시에 진행되지 않고 하나씩 차례대로 처리 때문
         }
-
     }
 
     class Enemy
