@@ -12,21 +12,21 @@ namespace MyConsoleGame
     class Player
     {
         [DllImport("msvcrt.dll")]
-        static extern int _getch(); // c언어 함수 가져옴
+        static extern int _getch(); // 문자 입력 함수 (c언어 함수 가져옴)
 
         public int X, Y; // 플레이어 좌표
         public int Life = 3; // 목숨
         public bool isInvincible = false; // 무적 상태 여부
         private int invincibleTime = 2000; // 무적 지속 시간 (2초)
 
-        public Player() { X = 2; Y = 2; } // 생성자 (시작 좌표 초기화)
+        public Player() { X = 2; Y = 2; } // 생성자 (플레이어 시작 좌표 초기화)
 
         public void KeyControl()
         {
             if (Console.KeyAvailable)
             {
                 int pressKey = _getch(); // 키 값
-                // 밀림 방지
+                // 키 밀림 방지
                 if (pressKey == 0 || pressKey == 224) // 화살표 키 또는 특수 키 감지
                     pressKey = _getch(); // 실제 키 값 읽기
 
@@ -39,22 +39,13 @@ namespace MyConsoleGame
                     case 80: newY++; break; // 아래
                     case 32: Bomb.PlantBomb(X, Y); break; // 스페이스바 (폭탄 설치)
                 }
-                if (Map.IsValidMove(newX, newY)) { X = newX; Y = newY; }
+                if (Program.map.IsValid(newX, newY)) { X = newX; Y = newY; }
             }
 
             // 충돌 체크 한 번만 실행
             if (!isInvincible)
-            {
-                foreach (Enemy enemy in Program.enemies)
-                {
-                    if (X == enemy.X && Y == enemy.Y && enemy.isAlive)
-                    {
-                        TakeDamage(); // 데미지 받고 바로 루프 탈출
-                        break;
-                    }
-                }
-            }
-
+                foreach (Enemy enemy in Program.enemies.Where(e => X == e.X && Y == e.Y)) // Where() 메서드를 통해 적 리스트에서 플레이어와 좌표가 같은 적만 필터링
+                    TakeDamage();
         }
 
         public void TakeDamage()
@@ -64,30 +55,29 @@ namespace MyConsoleGame
                 Life--;
                 if (Life <= 0)
                 {
-                    Thread.Sleep(1000);
-                    Console.SetCursorPosition(0, 0);
+                    Console.ForegroundColor = ConsoleColor.Green; // 텍스트 색 변경
+
+                    // Game Over 타이틀 출력
                     Console.Clear();
+                    Console.SetCursorPosition(0, 0);
                     Console.WriteLine("🤢");
                     Thread.Sleep(1000);
                     Console.Clear();
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine("🤮");
                     Thread.Sleep(200);
-                    Console.WriteLine(" d888b   .d8b.  .88b  d88. d88888b    .d88b.  db    db d88888b d8888b. ");
-                    Thread.Sleep(200);
-                    Console.WriteLine("88' Y8b d8' `8b 88'YbdP`88 88'       .8P  Y8. 88    88 88'     88  `8D ");
-                    Thread.Sleep(200);
-                    Console.WriteLine("88      88ooo88 88  88  88 88ooooo   88    88 Y8    8P 88ooooo 88oobY' ");
-                    Thread.Sleep(200);
-                    Console.WriteLine("88  ooo 88~~~88 88  88  88 88~~~~~   88    88 `8b  d8' 88~~~~~ 88`8b   ");
-                    Thread.Sleep(200);
-                    Console.WriteLine("88. ~8~ 88   88 88  88  88 88.       `8b  d8'  `8bd8'  88.     88 `88. ");
-                    Thread.Sleep(200);
-                    Console.WriteLine(" Y888P  YP   YP YP  YP  YP Y88888P    `Y88P'     YP    Y88888P 88   YD ");
+                    foreach (var line in Program.GAME_OVER)
+                    {
+                        Console.WriteLine(line);
+                        Thread.Sleep(200); // 200ms 대기
+                    }
 
-                    Environment.Exit(0);
+                    Environment.Exit(0); // 프로그램 종료
                 }
+
                 isInvincible = true; // 무적 시작
+
+                // 비동기 작업
                 Task.Run(async () =>
                 {
                     await Task.Delay(invincibleTime); // 2초 대기
@@ -97,58 +87,73 @@ namespace MyConsoleGame
         }
     }
 
-    static class Map
+    class Map
     {
-        public static int width = 46, height = 15; // 맵 크기 저장 (50 x 13)
+        public int width = 50, height = 20; // 맵 크기 저장 (50 x 20)
 
-        public static string[,] Buffer = new string[height, width / 2]; // width / 2: 공백과 각 객체의 이모티콘들이 2칸을 차지 하기 때문
+        // C#에서 string은 한 번 생성되면 변경할 수 없음 (문자열을 수정할 때마다 새로운 문자열 객체가 생성)
+        // StringBuilder: 기존 문자열 수정 가능
+        public StringBuilder mapData = new StringBuilder(@"██████████████████████████████████████████████████
+██                                              ██
+██  ██  ░░  ██  ██  ██  ██  ██  ██  ░░  ██  ██  ██
+██  ░░      ██      ██      ██      ██      ██  ██
+██  ██  ██  ██  ░░  ██  ░░  ██  ██  ██  ██  ██  ██
+██      ██      ██      ░░      ██      ██      ██
+██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██
+██  ░░      ░░      ██      ░░      ██      ░░  ██
+██  ██  ░░  ██  ██  ░░  ██  ██  ██  ██  ░░  ██  ██
+██      ██      ██      ██      ░░      ██      ██
+██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██
+██  ██      ██      ░░      ██      ░░      ██  ██
+██  ██  ░░  ██  ░░  ██  ██  ██  ██  ██  ░░  ██  ██
+██      ██      ██      ██      ██      ██      ██
+██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██
+██  ░░      ░░      ██      ░░      ██      ░░  ██
+██  ██  ░░  ██  ██  ░░  ██  ██  ██  ██  ░░  ██  ██
+██      ██      ██      ██      ░░      ██      ██
+██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██
+██████████████████████████████████████████████████");
 
-        // 맵 문자열
-        public static string mapData = @"██████████████████████████████████████████████
-██                                          ██
-██  ██  ░░  ██  ██  ██  ██  ██  ██  ░░  ██  ██
-██  ░░      ██      ██      ██      ██      ██
-██  ██  ██  ██  ░░  ██  ░░  ██  ██  ██  ██  ██
-██      ██      ██      ░░      ██      ██  ██
-██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ░░  ██
-██  ░░      ░░      ██      ░░      ██      ██
-██  ██  ░░  ██  ██  ░░  ██  ██  ██  ██  ░░  ██
-██      ██      ██      ██      ░░      ██  ██
-██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██
-██  ██      ██      ░░      ██      ░░      ██
-██  ██  ░░  ██  ░░  ██  ██  ██  ██  ██  ██  ██
-██                                          ██
-██████████████████████████████████████████████";
+        public string[,] Buffer;
 
-        public static void InitMapBuffer()
+        public Map()
         {
-            string[] rows = mapData.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            // 한 칸당 2칸 차지
+            Buffer = new string[height, width / 2]; // width / 2 -> 공백과 각 객체의 이모티콘들이 2칸을 차지 하기 때문
+        }
+
+        // 버퍼 초기화
+        public void InitMapBuffer()
+        {
+            string[] rows = mapData.ToString().Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries); // mapData를 개행을 기준으로 나눔
+
             for (int y = 0; y < height; y++)
             {
                 for (int x = 0; x < width / 2; x++)
                 {
-                    if (Buffer[y, x] == "💣" || Buffer[y, x] == "🔥")
+                    if (Buffer[y, x] == "💣" || Buffer[y, x] == "🔥") // 폭탄이나 불꽃이면 이번 loop 넘어감
                         continue;
 
-                    if (x * 2 < rows[y].Length)
-                        Buffer[y, x] = rows[y].Substring(x * 2, Math.Min(2, rows[y].Length - x * 2));
-                    else
-                        Buffer[y, x] = "  ";
+                    Buffer[y, x] = rows[y].Substring(x * 2, 2); // 2칸씩 잘라서 버퍼에 저장 (블럭 하나 당 2칸 차지)
+                    // string Substring(int startIndex, int length)
+                    // startIndex : 문자열에서 시작 위치 (0부터 시작)
+                    // length: 잘라낼 문자 개수
                 }
             }
 
+            // Buffer에 폭탄 저장
             foreach (var bomb in Program.Bombs)
                 Buffer[bomb.Y, bomb.X / 2] = "💣";
-
         }
 
-        public static bool IsValidMove(int x, int y)
+        // 플레이어와 적 이동 또는 적 생성시 유효한 위치인지 검사
+        public bool IsValid(int x, int y)
         {
-            return (x > 0 && y >= 0 && x < width - 2 && y < height && Buffer[y, x / 2] == "  ");
+            // 맵 테두리가 아니고 공백일 시
+            return (x >= 2 && y >= 1 && x < width - 2 && y < height - 1 && Buffer[y, x / 2] == "  ");
         }
 
-        // Buffer 출력
-        public static void Draw()
+        public void Draw()
         {
             // Buffer 출력 
             Console.SetCursorPosition(0, 0);
@@ -159,7 +164,7 @@ namespace MyConsoleGame
                 Console.WriteLine();
             }
 
-            // 생명 출력
+            // 현재 남아있는 생명 출력
             Console.SetCursorPosition(width + 1, 0);
             Console.Write("┏━━━━━━━┓");
             Console.SetCursorPosition(width + 1, 1);
@@ -169,24 +174,46 @@ namespace MyConsoleGame
             Console.SetCursorPosition(width + 1, 2);
             Console.Write("┗━━━━━━━┛");
 
-            int count = 0;
-            foreach (var enemy in Program.enemies)
-            {
-                if (enemy.isAlive)
-                {
-                    count++;
-                }
-            }
-
             // 현재 남아있는 적 출력
             Console.SetCursorPosition(width + 1, 3);
             Console.Write("┏━━━━━━━┓");
             Console.SetCursorPosition(width + 1, 4);
             Console.Write("┃       ┃");
             Console.SetCursorPosition(width + 2, 4);
-            Console.Write($"😈 x {count}");
+            Console.Write($"😈 x {Program.enemies.Count}");
             Console.SetCursorPosition(width + 1, 5);
             Console.Write("┗━━━━━━━┛");
+
+            // 현재 남아있는 시간 출력
+            Console.SetCursorPosition(width + 1, 6);
+            Console.Write("┏━━━━━━━━━━━━━━━━━━━┓");
+            Console.SetCursorPosition(width + 1, 7);
+            Console.Write("┃                   ┃");
+            Console.SetCursorPosition(width + 2, 7);
+            Console.WriteLine($"⏳ 남은 시간: {Program.remainingTime}초 ");
+            Console.SetCursorPosition(width + 1, 8);
+            Console.Write("┗━━━━━━━━━━━━━━━━━━━┛");
+
+            /*
+            // Enemy 위치 좌표 출력 (테스트용)
+            int i = 0;
+            foreach (Enemy enemy in Program.enemies)
+            {
+                Console.SetCursorPosition(Program.map.width + 1, 9 + i++);
+                Console.WriteLine($"적 위치: {enemy.X}, {enemy.Y} | 플레이어 위치: {Program.player.X}, {Program.player.Y}");
+            }
+            */
+        }
+
+        public void RemoveBlock(int y, int x)
+        {
+            // mapData에서 제거할 블럭 인덱스 계산
+            // 각 문자열 끝에 \r \n 이 있으므로 width 값이 50이면 각 줄은 52개의 index로 이루어짐
+            // 50개의 index가 있다면 51번 인덱스는 \r(캐리지 리턴: 커서를 현재 줄의 맨 앞으로 이동), 52번 인덱스는 \n(개행)
+            int index = y * (width + 2) + x;
+            mapData.Remove(index, 2);
+            mapData.Insert(index, "  ");
+            Buffer[y, x / 2] = "  ";
         }
     }
 
@@ -203,8 +230,9 @@ namespace MyConsoleGame
         public static void PlantBomb(int x, int y)
         {
             Bomb bomb = new Bomb(x, y);
-            Program.Bombs.Add(bomb);
+            Program.Bombs.Add(bomb); // 폭탄 리스트에 새 폭탁 추가
 
+            // 비동기 작업 (별도의 스레드에서 실행되며, 현재 코드 흐름과 독립적으로 실행)
             Task.Run(async () =>
             {
                 await Task.Delay(3000); // 3초 대기
@@ -219,239 +247,271 @@ namespace MyConsoleGame
                 }
 
                 bomb.Explode(); // 폭발 메서드 호출
-
-
             });
         }
 
-
-        public void Explode()
+        public async Task Explode()
         {
-            // 폭탄 범위
             int[][] offsets =
             {
-                 new int[] { 0, 0 }, // 폭탄 위치 (가운데)
-                 new int[] { 0, -1 }, // 위쪽
-                 new int[] { 0, 1 }, // 아래쪽
-                 new int[] { -2, 0 }, // 왼쪽
-                 new int[] { 2, 0 } // 오른쪽
+                new int[] { 0, 0 },   // 폭탄 위치
+                new int[] { 0, -1 },  // 위쪽
+                new int[] { 0, 1 },   // 아래쪽
+                new int[] { -2, 0 },  // 왼쪽
+                new int[] { 2, 0 }    // 오른쪽
             };
 
-            /*
-            foreach (var offset in offsets)
+            // tasks는 각 offset에 대해 비동기 작업을 실행하는 Task들의 컬렉션
+            // 각 비동기 작업에 해당하는 Task 객체들이 즉시 저장
+            // 비동기 작업의 완료 시점은 Task 객체 자체가 관리하며, 작업이 완료되면 해당 Task의 상태가 완료됨으로 바뀝
+            // offsets.Select(...): offsets 컬렉션에 대해 각 항목에 대해 변환 작업을 수행
+            // async offset => {...}: 각 offset 항목마다 비동기 작업을 처리하는 람다 함수를 정의 (이 람다는 비동기 작업을 수행하고 결과를 반환하는 역할)
+            // 참고 URL: https://learn.microsoft.com/ko-kr/dotnet/csharp/asynchronous-programming/start-multiple-async-tasks-and-process-them-as-they-complete
+            // 참고 URL:https://learn.microsoft.com/ko-kr/dotnet/csharp/asynchronous-programming/task-asynchronous-programming-model?utm_source=chatgpt.com
+            var tasks = offsets.Select(async offset =>
             {
                 int ex = X + offset[0];
                 int ey = Y + offset[1];
 
-                // 무조건 불꽃 그리기 (벽만 아니면)
-                if (Map.Buffer[ey, ex / 2] != "██")
-                {
-                    Map.Buffer[ey, ex / 2] = "🔥";
-                }
+                // 부서지는 벽이면
+                if (Program.map.Buffer[ey, ex / 2] == "░░")
+                    Program.map.RemoveBlock(ey, ex); // 벽 제거
+
+                // 불꽃 생성
+                if (Program.map.Buffer[ey, ex / 2] != "██")
+                    Program.map.Buffer[ey, ex / 2] = "🔥";
 
                 // 플레이어가 맞았는지 체크
                 if (Program.player.X == ex && Program.player.Y == ey)
-                {
                     Program.player.TakeDamage();
-                }
-            }
-            */
+                // 버그: 비동기 방식 때문에 폭탄에 맞아서 죽으면 GameOver 타이틀 이상하게 나옴
+                // TakeDamage() 로 넘어가도 비동기 작업은 계속 진행되기 때문
 
-            //Thread.Sleep(500);
-
-            Task.Run(async () =>
-            {
-                foreach (var offset in offsets)
+                // 적 처리 (폭탄 범위 내의 적을 제거)
+                foreach (var enemy in Program.enemies.Where(enemy => enemy.X == ex && enemy.Y == ey).ToList())
                 {
-                    int ex = X + offset[0];
-                    int ey = Y + offset[1];
-                    // 무조건 불꽃 그리기 (벽만 아니면)
-                    if (Map.Buffer[ey, ex / 2] != "██" && Map.Buffer[ey, ex / 2] != "░░")
-                    {
-                        Map.Buffer[ey, ex / 2] = "🔥";
-                    }
-
-                    // 플레이어가 맞았는지 체크
-                    if (Program.player.X == ex && Program.player.Y == ey)
-                    {
-                        Program.player.TakeDamage();
-                    }
-                    // 적 맞았는지 먼저 체크
-                    foreach (Enemy enemy in Program.enemies)
-                    {
-                        if (!enemy.isAlive) continue; // 이미 죽은 적은 넘김
-
-                        if (enemy.isAlive)
-                        {
-                            int distanceX = Math.Abs(enemy.X - ex);
-                            int distanceY = Math.Abs(enemy.Y - ey);
-
-                            // 폭탄 불꽃 범위 안에 들어오면 죽게 함
-                            if (distanceX <= 1 && distanceY <= 1)
-                            {
-                                enemy.isAlive = false;
-                                Map.Buffer[enemy.Y, enemy.X / 2] = "💥";
-                                await Task.Delay(200);
-                                Map.Buffer[enemy.Y, enemy.X / 2] = "  ";
-                            }
-                        }
-                    }
+                    Program.enemies.Remove(enemy); // 리스트에서 제거
+                    Program.map.Buffer[enemy.Y, enemy.X / 2] = "💥";
+                    await Task.Delay(500); // 500ms 후 버퍼에서 적 제거 표시 제거
+                    Program.map.Buffer[enemy.Y, enemy.X / 2] = "  ";
                 }
+
+                // 불꽃 제거 (500ms 후)
+                await Task.Delay(500);
+                if (Program.map.Buffer[ey, ex / 2] == "🔥")
+                    Program.map.Buffer[ey, ex / 2] = "  ";
             });
 
-
-            Thread.Sleep(500);
-
-            // 불꽃 제거
-            foreach (var offset in offsets)
-            {
-                int ex = X + offset[0];
-                int ey = Y + offset[1];
-
-                if (Map.Buffer[ey, ex / 2] == "🔥")
-                {
-                    Map.Buffer[ey, ex / 2] = "  ";
-                }
-            }
+            await Task.WhenAll(tasks); // 모든 폭발 처리가 끝날 때까지 대기
         }
+
     }
 
     class Enemy
     {
         public int X, Y;
         private static Random rand = new Random();
-        public bool isAlive = true;
 
         public void Initialize()
         {
-            do { X = rand.Next(2, Map.width - 2); Y = rand.Next(0, Map.height); }
-            while (!Map.IsValidMove(X, Y));
+            do
+            {
+                X = rand.Next(2, Program.map.width - 2); Y = rand.Next(2, Program.map.height - 1); // 랜덤한 좌표 생성
+
+                if (X % 2 != 0) X--; // 좌표 보정 (짝수 좌표만 생성)
+            }
+            while (!Program.map.IsValid(X, Y)); // 맵에 생성 가능할 때까지 반복
         }
 
         public void Move(Player player)
         {
             int newX = X, newY = Y;
 
+            // 플레이어 쪽으로 움직임
             if (player.X > X) newX += 2;
             else if (player.X < X) newX -= 2;
-
-            // 다른 적들과 겹치는지 검사
-            bool canMoveX = true;
-            foreach (var enemy in Program.enemies)
-            {
-                if (enemy != this && enemy.X == newX && enemy.Y == Y && enemy.isAlive)
-                {
-                    canMoveX = false;
-                    break; // 다른 적이 있으면 멈춤
-                }
-            }
-            if (canMoveX && Map.IsValidMove(newX, Y)) X = newX;
-
             if (player.Y > Y) newY++;
             else if (player.Y < Y) newY--;
 
-            // Y 방향 충돌 검사
-            bool canMoveY = true;
+            bool canMove = true;
+
+            // 이동하려는 좌표에 적이 있는지 검사 (적 겹침 방지)
             foreach (var enemy in Program.enemies)
             {
-                if (enemy != this && enemy.X == X && enemy.Y == newY && enemy.isAlive)
+                if (enemy != this && enemy.X == newX && enemy.Y == newY)
                 {
-                    canMoveY = false;
+                    canMove = false;
                     break;
                 }
             }
-            if (canMoveY && Map.IsValidMove(X, newY)) Y = newY;
-        }
 
+            if (canMove && Program.map.IsValid(newX, newY) && Program.map.IsValid(newX, Y) && Program.map.IsValid(X, newY)) // 길이 막혔을 때 대각선으로 이동 금지
+            {
+                X = newX;
+                Y = newY;
+            }
+            else if (canMove && Program.map.IsValid(newX, Y)) // X축만 이동 가능하면 이동
+            {
+                X = newX;
+            }
+            else if (canMove && Program.map.IsValid(X, newY)) // Y축만 이동 가능하면 이동
+            {
+                Y = newY;
+            }
+        }
     }
 
     class Program
     {
-        public static Player player = new Player();
-        public static Enemy[] enemies = new Enemy[5];
+        public static Map map = new Map(); // 맵 객체 생성
+        public static Player player = new Player(); // 플레이어 객체 생성
+        public static List<Enemy> enemies = new List<Enemy>(); // 적 리스트 생성
+        public const int MAX_ENEMY = 8; // 적 생성 숫자
         public static List<Bomb> Bombs = new List<Bomb>(); // 폭탄 리스트
-        public static int DeadCount = 0;
+        public static int remainingTime = 60; // 남은 시간 (초)
+        public static int DeadCount = 0; // 죽은 적 카운터
         static int enemyMoveTime = Environment.TickCount;
+
+        public static string[] MAIN_TITLE = new string[]
+        {
+            "______                    _                                     ",
+            "| ___ \\                  | |                                    ",
+            "| |_/ /  ___   _ __ ___  | |__     __ _   __ _  _ __ ___    ___ ",
+            "| ___ \\ / _ \\ | '_ ` _ \\ | '_ \\   / _` | / _` || '_ ` _ \\  / _ \\",
+            "| |_/ /| (_) || | | | | || |_) | | (_| || (_| || | | | | ||  __/",
+            "\\____/  \\___/ |_| |_| |_||_.__/   \\__, | \\__,_||_| |_| |_| \\___|",
+            "                                   __/ |                        ",
+            "                                  |___/                           "
+        };
+
+        public static string[] GAME_CLEAR = new string[]
+        {
+            " d888b   .d8b.  .88b  d88. d88888b    .o88b. db      d88888b  .d8b.  d8888b. ",
+            "88' Y8b d8' `8b 88'YbdP`88 88'       d8P  Y8 88      88'     d8' `8b 88  `8D ",
+            "88      88ooo88 88  88  88 88ooooo   8P      88      88ooooo 88ooo88 88oobY' ",
+            "88  ooo 88~~~88 88  88  88 88~~~~~   8b      88      88~~~~~ 88~~~88 88`8b   ",
+            "88. ~8~ 88   88 88  88  88 88.       Y8b  d8 88booo. 88.     88   88 88 `88. ",
+            " Y888P  YP   YP YP  YP  YP Y88888P    `Y88P' Y88888P Y88888P YP   YP 88   YD "
+        };
+
+        public static string[] GAME_OVER = new string[]
+        {
+            " d888b   .d8b.  .88b  d88. d88888b    .d88b.  db    db d88888b d8888b. ",
+            "88' Y8b d8'  8b 88'YbdP 88 88'       .8P  Y8. 88    88 88'     88  `8D ",
+            "88      88ooo88 88  88  88 88ooooo   88    88 Y8    8P 88ooooo 88oobY' ",
+            "88  ooo 88~~~88 88  88  88 88~~~~~   88    88 `8b  d8' 88~~~~~ 88`8b   ",
+            "88. ~8~ 88   88 88  88  88 88.       `8b  d8'  `8bd8'  88.     88 `88. ",
+            " Y888P  YP   YP YP  YP  YP Y88888P    `Y88P'     YP    Y88888P 88   YD "
+        };
+
+        public static string[] TIME_OVER = new string[]
+        {
+            "d888888b d888888b .88b  d88. d88888b    .d88b.  db    db d88888b d8888b. ",
+            "`~~88~~'   `88'   88'YbdP`88 88'       .8P  Y8. 88    88 88'     88  `8D ",
+            "   88       88    88  88  88 88ooooo   88    88 Y8    8P 88ooooo 88oobY' ",
+            "   88       88    88  88  88 88~~~~~   88    88 `8b  d8' 88~~~~~ 88`8b   ",
+            "   88      .88.   88  88  88 88.       `8b  d8'  `8bd8'  88.     88 `88. ",
+            "   YP    Y888888P YP  YP  YP Y88888P    `Y88P'     YP    Y88888P 88   YD "
+        };
 
         static void Main()
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Console.CursorVisible = false;
-            Console.SetWindowSize(60, 40);
-            Console.SetBufferSize(60, 40);
-            Map.InitMapBuffer();
+            Console.OutputEncoding = System.Text.Encoding.UTF8; // 콘솔 애플리케이션에서 출력 인코딩을 UTF-8로 설정 (특수 문자 출력 가능)
+            Console.CursorVisible = false; // 커서 숨기기
+            Console.SetWindowSize(80, 40); // 콘솔 창 크기 조정
+            Console.SetBufferSize(80, 40); // 버퍼 크기 조정
+            Console.ForegroundColor = ConsoleColor.Green; // 텍스트 색 변경
 
-            for (int i = 0; i < enemies.Length; i++)
+            Console.Clear();
+
+            // 메인 타이틀 출력
+            foreach (var line in MAIN_TITLE)
             {
-                enemies[i] = new Enemy();
-                enemies[i].Initialize();
+                Console.WriteLine(line);
+                Thread.Sleep(200); // 일정 시간 대기
+            }
+            Console.WriteLine("\n\n                        Press any key...");
+
+            Console.ReadKey(); // 키 입력시
+
+            Console.ForegroundColor = ConsoleColor.White; // 텍스트 색 변경
+
+            map.InitMapBuffer(); // 맵 초기화
+
+            for (int i = 0; i < MAX_ENEMY; i++)
+            {
+                enemies.Add(new Enemy()); // 객체 할당
+                enemies[i].Initialize(); // 적 객체 위치 초기화
             }
 
             while (true)
             {
                 Console.Clear();
-                Map.InitMapBuffer(); // 맵 초기화
+                map.InitMapBuffer(); // 맵 초기화
                 player.KeyControl();
 
                 foreach (var bomb in Program.Bombs)
-                {
-                    Map.Buffer[bomb.Y, bomb.X / 2] = "💣";
-                }
+                    map.Buffer[bomb.Y, bomb.X / 2] = "💣";
 
                 // 플레이어 그리기
                 if (!player.isInvincible)
-                    Map.Buffer[player.Y, player.X / 2] = "😳";
+                    map.Buffer[player.Y, player.X / 2] = "😳";
                 else
-                    Map.Buffer[player.Y, player.X / 2] = "🤕";
+                    map.Buffer[player.Y, player.X / 2] = "🤕";
 
-                // 적 이동 및 그리기
-                if (enemyMoveTime + 1000 < Environment.TickCount)
+                // Enemy 이동 (1초마다 이동)
+                if (enemyMoveTime + 1000 < Environment.TickCount) // 1초가 지났을 때
                 {
+                    remainingTime--; // 전체 시간 감소
+
                     foreach (var enemy in enemies)
-                    {
-                        if (enemy.isAlive)
-                            enemy.Move(player);
-                    }
+                        enemy.Move(player); // Enemy 이동
 
-                    enemyMoveTime = Environment.TickCount;
+                    enemyMoveTime = Environment.TickCount; // 현재 시간으로 초기화
                 }
+
+                // Enemy 출력
                 foreach (var enemy in enemies)
+                    map.Buffer[enemy.Y, enemy.X / 2] = "😈";
+
+                // 게임 클리어 이벤트
+                if (enemies.Count == 0)
                 {
-                    if (enemy.isAlive)
-                    {
-                        Map.Buffer[enemy.Y, enemy.X / 2] = "😈";
-                    }
-                    else
-                    {
-                        DeadCount++;
-                    }
-                }
-                if (DeadCount == 5)
-                {
+                    remainingTime = 0;
+                    Console.ForegroundColor = ConsoleColor.Green; // 텍스트 색 변경
                     Thread.Sleep(50);
                     Console.Clear();
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine("🥳");
                     Thread.Sleep(200);
-                    Console.WriteLine(" d888b   .d8b.  .88b  d88. d88888b    .o88b. db      d88888b  .d8b.  d8888b. db ");
-                    Thread.Sleep(200);
-                    Console.WriteLine("88' Y8b d8' `8b 88'YbdP`88 88'       d8P  Y8 88      88'     d8' `8b 88  `8D 88 ");
-                    Thread.Sleep(200);
-                    Console.WriteLine("88      88ooo88 88  88  88 88ooooo   8P      88      88ooooo 88ooo88 88oobY' YP ");
-                    Thread.Sleep(200);
-                    Console.WriteLine("88  ooo 88~~~88 88  88  88 88~~~~~   8b      88      88~~~~~ 88~~~88 88`8b   db ");
-                    Thread.Sleep(200);
-                    Console.WriteLine("88. ~8~ 88   88 88  88  88 88.       Y8b  d8 88booo. 88.     88   88 88 `88.    ");
-                    Thread.Sleep(200);
-                    Console.WriteLine(" Y888P  YP   YP YP  YP  YP Y88888P    `Y88P' Y88888P Y88888P YP   YP 88   YD YP ");
-
+                    // Game Clear 아스키아트 출력
+                    foreach (var line in GAME_CLEAR)
+                    {
+                        Console.WriteLine(line);
+                        Thread.Sleep(200);
+                    }
                     Environment.Exit(0);
                 }
                 else
                     DeadCount = 0;
 
-                Map.Draw();
-                Thread.Sleep(50);
+                // 시간 초과 이벤트
+                if (remainingTime < 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed; // 텍스트 색 변경
+                    Console.Clear();
+                    // Time Over 아스키아트 출력
+                    foreach (var line in TIME_OVER)
+                    {
+                        Console.WriteLine(line);
+                        Thread.Sleep(200);
+                    }
+                    Console.WriteLine("\n⏳ 시간이 종료되었습니다! 게임 오버!");
+                    Environment.Exit(0); // 프로그램 종료
+                }
+
+                map.Draw();
+                Thread.Sleep(50); // 게임 프레임 조정 (1000/50 FPS -> 20 FPS)
             }
         }
     }
