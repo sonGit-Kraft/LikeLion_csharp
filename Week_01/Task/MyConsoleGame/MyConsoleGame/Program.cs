@@ -267,7 +267,7 @@ namespace MyConsoleGame
             // offsets.Select(...): offsets 컬렉션에 대해 각 항목에 대해 변환 작업을 수행
             // async offset => {...}: 각 offset 항목마다 비동기 작업을 처리하는 람다 함수를 정의 (이 람다는 비동기 작업을 수행하고 결과를 반환하는 역할)
             // 참고 URL: https://learn.microsoft.com/ko-kr/dotnet/csharp/asynchronous-programming/start-multiple-async-tasks-and-process-them-as-they-complete
-            // 참고 URL:https://learn.microsoft.com/ko-kr/dotnet/csharp/asynchronous-programming/task-asynchronous-programming-model?utm_source=chatgpt.com
+            // 참고 URL: https://learn.microsoft.com/ko-kr/dotnet/csharp/asynchronous-programming/task-asynchronous-programming-model?utm_source=chatgpt.com
             var tasks = offsets.Select(async offset =>
             {
                 int ex = X + offset[0];
