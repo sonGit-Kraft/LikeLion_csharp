@@ -115,6 +115,7 @@ namespace MyConsoleGame
         // C#에서 string은 한 번 생성되면 변경할 수 없음 (문자열을 수정할 때마다 새로운 문자열 객체가 생성)
         // StringBuilder: 기존 문자열 수정 가능
 
+        // 버퍼 (더블 버퍼링 방식 사용)
         public string[,] Buffer;
 
         public Map()
