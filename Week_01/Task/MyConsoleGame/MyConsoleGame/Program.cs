@@ -425,8 +425,6 @@ namespace MyConsoleGame
             Console.SetBufferSize(80, 40); // 버퍼 크기 조정
             Console.ForegroundColor = ConsoleColor.Green; // 텍스트 색 변경
 
-            Console.Clear();
-
             // Main Title 아스키아트 출력
             foreach (var line in MAIN_TITLE)
             {
@@ -436,6 +434,8 @@ namespace MyConsoleGame
             Console.WriteLine("\n\n                        Press any key...");
 
             Console.ReadKey(); // 키 입력시
+
+            Console.Clear();
 
             Console.ForegroundColor = ConsoleColor.White; // 텍스트 색 변경
 
@@ -449,7 +449,7 @@ namespace MyConsoleGame
 
             while (true)
             {
-                Console.Clear();
+                //Console.Clear(); // 콘솔 클리어 없애서 깜빡거리는거 없앰
                 map.InitMapBuffer(); // 맵 초기화
                 player.KeyControl();
 
