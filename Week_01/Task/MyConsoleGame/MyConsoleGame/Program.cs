@@ -449,8 +449,10 @@ namespace MyConsoleGame
 
             while (true)
             {
-                //Console.Clear(); // 콘솔 클리어 없애서 깜빡거리는거 없앰
+                //Console.Clear(); // 콘솔 클리어 없애서 화면 깜빡임 없앰 (어차피 버퍼가 실시간으로 수정되기 때문에 출력만 하면됨)
+
                 map.InitMapBuffer(); // 맵 초기화
+
                 player.KeyControl();
 
                 // 폭탄 리스트를 통해 폭탄을 버퍼에 저장
@@ -482,18 +484,20 @@ namespace MyConsoleGame
                 if (enemies.Count == 0) // 적이 0일 때
                 {
                     remainingTime = 0;
+
                     Console.ForegroundColor = ConsoleColor.Green; // 텍스트 색 변경
-                    Thread.Sleep(50);
                     Console.Clear();
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine("🥳 모든 적을 처치하였습니다!\n");
                     Thread.Sleep(500);
+
                     // Game Clear 아스키아트 출력
                     foreach (var line in GAME_CLEAR)
                     {
                         Console.WriteLine(line);
                         Thread.Sleep(200);
                     }
+
                     Environment.Exit(0);
                 }
 
@@ -504,6 +508,8 @@ namespace MyConsoleGame
                     Console.Clear();
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine("⏳ 시간이 종료되었습니다! 게임 오버!\n");
+                    hread.Sleep(500);
+
                     // Time Over 아스키아트 출력
                     foreach (var line in TIME_OVER)
                     {
