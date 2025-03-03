@@ -252,6 +252,7 @@ namespace MyConsoleGame
             });
         }
 
+        // 비동기 메서드
         public async Task Explode()
         {
             int[][] ranges =
@@ -270,6 +271,7 @@ namespace MyConsoleGame
             // async range => {...}: 각 range 항목마다 비동기 작업을 처리하는 람다 함수를 정의 (이 람다는 비동기 작업을 수행하고 결과를 반환하는 역할)
             // 참고 URL: https://learn.microsoft.com/ko-kr/dotnet/csharp/asynchronous-programming/start-multiple-async-tasks-and-process-them-as-they-complete
             // 참고 URL: https://learn.microsoft.com/ko-kr/dotnet/csharp/asynchronous-programming/task-asynchronous-programming-model?utm_source=chatgpt.com
+            // 참고 URL: https://kimjh0727.tistory.com/entry/C%EC%97%90%EC%84%9C-asyncawait-%EC%9E%90%EC%84%B8%ED%9E%88-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0
             var tasks = ranges.Select(async range => // 비동기 작업을 통해 동시 처리
             {
                 int ex = X + range[0];
@@ -449,7 +451,7 @@ namespace MyConsoleGame
 
             while (true)
             {
-                //Console.Clear(); // 콘솔 클리어 없애서 화면 깜빡임 없앰 (어차피 버퍼가 실시간으로 수정되기 때문에 출력만 하면됨)
+                //Console.Clear(); // 콘솔 클리어 없애서 화면 깜빡임 없앰 (어차피 버퍼가 실시간으로 수정되기 때문에 출력만 하면 됨)
 
                 map.InitMapBuffer(); // 맵 초기화
 
@@ -468,7 +470,7 @@ namespace MyConsoleGame
                 // Enemy 이동 (1초마다 이동)
                 if (enemyMoveTime + 1000 < Environment.TickCount) // 1초가 지났을 때
                 {
-                    remainingTime--; // 전체 시간 감소
+                    remainingTime--; // 남은 시간 감소
 
                     foreach (var enemy in enemies)
                         enemy.Move(player); // Enemy 이동 (좌표 변경)
@@ -483,7 +485,7 @@ namespace MyConsoleGame
                 // 게임 클리어 이벤트
                 if (enemies.Count == 0) // 적이 0일 때
                 {
-                    remainingTime = 0;
+                    remainingTime = 0; // 타임 오버로 넘어가는 거 방지
 
                     Console.ForegroundColor = ConsoleColor.Green; // 텍스트 색 변경
                     Console.Clear();
@@ -498,7 +500,7 @@ namespace MyConsoleGame
                         Thread.Sleep(200);
                     }
 
-                    Environment.Exit(0);
+                    Environment.Exit(0); // 프로그램 종료
                 }
 
                 // 시간 초과 이벤트
