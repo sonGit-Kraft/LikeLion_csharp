@@ -55,17 +55,18 @@ namespace MyConsoleGame
                 Life--;
                 if (Life <= 0)
                 {
-                    Console.ForegroundColor = ConsoleColor.Green; // 텍스트 색 변경
+                    Console.ForegroundColor = ConsoleColor.DarkRed; // 텍스트 색 변경
 
-                    // Game Over 타이틀 출력
                     Console.Clear();
                     Console.SetCursorPosition(0, 0);
-                    Console.WriteLine("🤢");
+                    Console.WriteLine("❤️");
                     Thread.Sleep(1000);
                     Console.Clear();
                     Console.SetCursorPosition(0, 0);
-                    Console.WriteLine("🤮");
-                    Thread.Sleep(200);
+                    Console.WriteLine("💔 남은 목숨이 없습니다...\n");
+                    Thread.Sleep(500);
+
+                    // Game Over 아스키아트 출력
                     foreach (var line in Program.GAME_OVER)
                     {
                         Console.WriteLine(line);
@@ -91,8 +92,6 @@ namespace MyConsoleGame
     {
         public int width = 50, height = 20; // 맵 크기 저장 (50 x 20)
 
-        // C#에서 string은 한 번 생성되면 변경할 수 없음 (문자열을 수정할 때마다 새로운 문자열 객체가 생성)
-        // StringBuilder: 기존 문자열 수정 가능
         public StringBuilder mapData = new StringBuilder(@"██████████████████████████████████████████████████
 ██                                              ██
 ██  ██  ░░  ██  ██  ██  ██  ██  ██  ░░  ██  ██  ██
@@ -113,19 +112,21 @@ namespace MyConsoleGame
 ██      ██      ██      ██      ░░      ██      ██
 ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██  ██
 ██████████████████████████████████████████████████");
+        // C#에서 string은 한 번 생성되면 변경할 수 없음 (문자열을 수정할 때마다 새로운 문자열 객체가 생성)
+        // StringBuilder: 기존 문자열 수정 가능
 
         public string[,] Buffer;
 
         public Map()
         {
             // 한 칸당 2칸 차지
-            Buffer = new string[height, width / 2]; // width / 2 -> 공백과 각 객체의 이모티콘들이 2칸을 차지 하기 때문
+            Buffer = new string[height, width / 2]; // width / 2 -> 블럭 하나가 2칸을 차지 하기 때문
         }
 
         // 버퍼 초기화
         public void InitMapBuffer()
         {
-            string[] rows = mapData.ToString().Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries); // mapData를 개행을 기준으로 나눔
+            string[] rows = mapData.ToString().Split(new[] { '\n' }); // mapData를 개행을 기준으로 나눔
 
             for (int y = 0; y < height; y++)
             {
@@ -209,7 +210,7 @@ namespace MyConsoleGame
         {
             // mapData에서 제거할 블럭 인덱스 계산
             // 각 문자열 끝에 \r \n 이 있으므로 width 값이 50이면 각 줄은 52개의 index로 이루어짐
-            // 50개의 index가 있다면 51번 인덱스는 \r(캐리지 리턴: 커서를 현재 줄의 맨 앞으로 이동), 52번 인덱스는 \n(개행)
+            // 크기가 50인 문자열이 있다면 0 ~ 49번 인덱스는 문자, 50번 인덱스는 \r(캐리지 리턴: 커서를 현재 줄의 맨 앞으로 이동), 51번 인덱스는 \n(개행)
             int index = y * (width + 2) + x;
             mapData.Remove(index, 2);
             mapData.Insert(index, "  ");
@@ -241,7 +242,7 @@ namespace MyConsoleGame
                     if (Program.Bombs.Contains(bomb))
                         Program.Bombs.Remove(bomb); // 리스트에서 삭제
 
-                    // 리스트에서 먼저 삭제 후 폭발 메서드 호출하는 이유
+                    // 리스트에서 먼저 삭제 후 폭발 메서드 호출하는 이유:
                     // 리스트에서 먼저 삭제 하지 않으면 메인 Loop에서 
                     // InitMapBuffer를 호출할 때 Bomb 리스트에 있는 폭탄이 출력된다
                 }
@@ -252,7 +253,7 @@ namespace MyConsoleGame
 
         public async Task Explode()
         {
-            int[][] offsets =
+            int[][] ranges =
             {
                 new int[] { 0, 0 },   // 폭탄 위치
                 new int[] { 0, -1 },  // 위쪽
@@ -261,17 +262,17 @@ namespace MyConsoleGame
                 new int[] { 2, 0 }    // 오른쪽
             };
 
-            // tasks는 각 offset에 대해 비동기 작업을 실행하는 Task들의 컬렉션 (각 비동기 작업에 해당하는 Task 객체들이 즉시 저장)
-            // 비동기 방식으로 작업을 처리하는 경우, 각 offset에 대한 작업이 동시에 진행
+            // tasks는 각 range에 대해 비동기 작업을 실행하는 Task들의 컬렉션 (각 비동기 작업에 해당하는 Task 객체들이 즉시 저장)
+            // 비동기 방식으로 작업을 처리하는 경우, 각 range에 대한 작업이 동시에 진행
             // 비동기 작업의 완료 시점은 Task 객체 자체가 관리하며, 작업이 완료되면 해당 Task의 상태가 완료됨으로 바뀝
-            // offsets.Select(...): offsets 컬렉션에 대해 각 항목에 대해 변환 작업을 수행
-            // async offset => {...}: 각 offset 항목마다 비동기 작업을 처리하는 람다 함수를 정의 (이 람다는 비동기 작업을 수행하고 결과를 반환하는 역할)
+            // ranges.Select(...): ranges 컬렉션에 대해 각 항목에 대해 변환 작업을 수행
+            // async range => {...}: 각 range 항목마다 비동기 작업을 처리하는 람다 함수를 정의 (이 람다는 비동기 작업을 수행하고 결과를 반환하는 역할)
             // 참고 URL: https://learn.microsoft.com/ko-kr/dotnet/csharp/asynchronous-programming/start-multiple-async-tasks-and-process-them-as-they-complete
             // 참고 URL: https://learn.microsoft.com/ko-kr/dotnet/csharp/asynchronous-programming/task-asynchronous-programming-model?utm_source=chatgpt.com
-            var tasks = offsets.Select(async offset =>
+            var tasks = ranges.Select(async range => // 비동기 작업을 통해 동시 처리
             {
-                int ex = X + offset[0];
-                int ey = Y + offset[1];
+                int ex = X + range[0];
+                int ey = Y + range[1];
 
                 // 부서지는 벽이면
                 if (Program.map.Buffer[ey, ex / 2] == "░░")
@@ -288,7 +289,7 @@ namespace MyConsoleGame
                 // TakeDamage() 로 넘어가도 비동기 작업은 계속 진행되기 때문
 
                 // 적 처리 (폭탄 범위 내의 적을 제거)
-                foreach (var enemy in Program.enemies.Where(enemy => enemy.X == ex && enemy.Y == ey).ToList())
+                foreach (var enemy in Program.enemies.Where(enemy => enemy.X == ex && enemy.Y == ey).ToList()) // foreach 루프에서 Program.enemies.Remove(enemy)를 실행하면 원본 컬렉션이 변경되면서 오류가 발생 -> ToList()를 호출하면 새로운 리스트를 만들어서 foreach가 이 리스트를 순회
                 {
                     Program.enemies.Remove(enemy); // 리스트에서 제거
                     Program.map.Buffer[enemy.Y, enemy.X / 2] = "💥";
@@ -305,6 +306,7 @@ namespace MyConsoleGame
             await Task.WhenAll(tasks); // 모든 비동기 작업이 끝날 때까지 대기
             // 비동기 작업을 사용하지 않는다면 동시 처리가 이루어지지 않을 가능성이 있음
             // 한 작업이 끝나야 다음 작업이 진행되기 때문에, 여러 작업이 동시에 진행되지 않고 하나씩 차례대로 처리 때문
+            // 기존 동기 코드에서는 플레이어 → 적 순서로 실행되므로 동시 처리가 불가능
         }
     }
 
@@ -370,7 +372,6 @@ namespace MyConsoleGame
         public const int MAX_ENEMY = 8; // 적 생성 숫자
         public static List<Bomb> Bombs = new List<Bomb>(); // 폭탄 리스트
         public static int remainingTime = 60; // 남은 시간 (초)
-        public static int DeadCount = 0; // 죽은 적 카운터
         static int enemyMoveTime = Environment.TickCount;
 
         public static string[] MAIN_TITLE = new string[]
@@ -425,7 +426,7 @@ namespace MyConsoleGame
 
             Console.Clear();
 
-            // 메인 타이틀 출력
+            // Main Title 아스키아트 출력
             foreach (var line in MAIN_TITLE)
             {
                 Console.WriteLine(line);
@@ -451,10 +452,11 @@ namespace MyConsoleGame
                 map.InitMapBuffer(); // 맵 초기화
                 player.KeyControl();
 
+                // 폭탄 리스트를 통해 폭탄을 버퍼에 저장
                 foreach (var bomb in Program.Bombs)
                     map.Buffer[bomb.Y, bomb.X / 2] = "💣";
 
-                // 플레이어 그리기
+                // 플레이어 버퍼에 저장
                 if (!player.isInvincible)
                     map.Buffer[player.Y, player.X / 2] = "😳";
                 else
@@ -466,25 +468,25 @@ namespace MyConsoleGame
                     remainingTime--; // 전체 시간 감소
 
                     foreach (var enemy in enemies)
-                        enemy.Move(player); // Enemy 이동
+                        enemy.Move(player); // Enemy 이동 (좌표 변경)
 
                     enemyMoveTime = Environment.TickCount; // 현재 시간으로 초기화
                 }
 
-                // Enemy 출력
+                // Enemy 버퍼에 저장
                 foreach (var enemy in enemies)
                     map.Buffer[enemy.Y, enemy.X / 2] = "😈";
 
                 // 게임 클리어 이벤트
-                if (enemies.Count == 0)
+                if (enemies.Count == 0) // 적이 0일 때
                 {
                     remainingTime = 0;
                     Console.ForegroundColor = ConsoleColor.Green; // 텍스트 색 변경
                     Thread.Sleep(50);
                     Console.Clear();
                     Console.SetCursorPosition(0, 0);
-                    Console.WriteLine("🥳");
-                    Thread.Sleep(200);
+                    Console.WriteLine("🥳 모든 적을 처치하였습니다!\n");
+                    Thread.Sleep(500);
                     // Game Clear 아스키아트 출력
                     foreach (var line in GAME_CLEAR)
                     {
@@ -493,25 +495,26 @@ namespace MyConsoleGame
                     }
                     Environment.Exit(0);
                 }
-                else
-                    DeadCount = 0;
 
                 // 시간 초과 이벤트
                 if (remainingTime < 0)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkRed; // 텍스트 색 변경
                     Console.Clear();
+                    Console.SetCursorPosition(0, 0);
+                    Console.WriteLine("⏳ 시간이 종료되었습니다! 게임 오버!\n");
                     // Time Over 아스키아트 출력
                     foreach (var line in TIME_OVER)
                     {
                         Console.WriteLine(line);
-                        Thread.Sleep(200);
+                        Thread.Sleep(500);
                     }
-                    Console.WriteLine("\n⏳ 시간이 종료되었습니다! 게임 오버!");
+                    
                     Environment.Exit(0); // 프로그램 종료
                 }
 
-                map.Draw();
+                map.Draw(); // 버퍼 출력
+
                 Thread.Sleep(50); // 게임 프레임 조정 (1000/50 FPS -> 20 FPS)
             }
         }

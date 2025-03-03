@@ -1,0 +1,7 @@
+C:\LikeLion\LikeLion\Week_01\Task\MyConsoleGameTest\MyConsoleGameTest\bin\Debug\MyConsoleGameTest.exe.config
+C:\LikeLion\LikeLion\Week_01\Task\MyConsoleGameTest\MyConsoleGameTest\bin\Debug\MyConsoleGameTest.exe
+C:\LikeLion\LikeLion\Week_01\Task\MyConsoleGameTest\MyConsoleGameTest\bin\Debug\MyConsoleGameTest.pdb
+C:\LikeLion\LikeLion\Week_01\Task\MyConsoleGameTest\MyConsoleGameTest\obj\Debug\MyConsoleGameTest.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\Week_01\Task\MyConsoleGameTest\MyConsoleGameTest\obj\Debug\MyConsoleGameTest.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\Week_01\Task\MyConsoleGameTest\MyConsoleGameTest\obj\Debug\MyConsoleGameTest.exe
+C:\LikeLion\LikeLion\Week_01\Task\MyConsoleGameTest\MyConsoleGameTest\obj\Debug\MyConsoleGameTest.pdb
