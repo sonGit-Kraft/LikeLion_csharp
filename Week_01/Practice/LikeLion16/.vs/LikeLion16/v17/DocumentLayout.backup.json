@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\LikeLion\\LikeLion\\LikeLion16\\",
+  "WorkspaceRootPath": "C:\\LikeLion\\LikeLion\\Week_01\\Practice\\LikeLion16\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF35ADCA-CF3A-415A-8D2E-87EA3294BB80}|LikeLion16\\LikeLion16.csproj|c:\\likelion\\likelion\\likelion16\\likelion16\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FF35ADCA-CF3A-415A-8D2E-87EA3294BB80}|LikeLion16\\LikeLion16.csproj|c:\\likelion\\likelion\\week_01\\practice\\likelion16\\likelion16\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF35ADCA-CF3A-415A-8D2E-87EA3294BB80}|LikeLion16\\LikeLion16.csproj|solutionrelative:likelion16\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\LikeLion\\LikeLion\\LikeLion16\\LikeLion16\\Program.cs",
+              "DocumentMoniker": "C:\\LikeLion\\LikeLion\\Week_01\\Practice\\LikeLion16\\LikeLion16\\Program.cs",
               "RelativeDocumentMoniker": "LikeLion16\\Program.cs",
-              "ToolTip": "C:\\LikeLion\\LikeLion\\LikeLion16\\LikeLion16\\Program.cs*",
-              "RelativeToolTip": "LikeLion16\\Program.cs*",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwDMAAAAfAAAAAAAAAA==",
+              "ToolTip": "C:\\LikeLion\\LikeLion\\Week_01\\Practice\\LikeLion16\\LikeLion16\\Program.cs",
+              "RelativeToolTip": "LikeLion16\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-28T02:13:36.335Z",
               "EditorCaption": ""
