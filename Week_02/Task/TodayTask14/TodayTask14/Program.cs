@@ -12,6 +12,7 @@ namespace TodayTask14
         public int Score { get; set; }
         public int Strength { get; set; }
     }
+
     class Program
     {
         static void Main(string[] args)
