@@ -60,6 +60,10 @@ namespace LikeLion26
             Animal myAnima3 = new Animal();
             // 업캐스팅된 객체만 가능
             Dog myDog3 = (Dog)myAnima3; // Error: Can't assign a variable of a higher type to a variable of a lower type
+
+            // 업캐스팅: 자식 클래스(Dog)를 부모 클래스(Animal)라는 큰 상자에 담는 것
+            // 다운캐스팅: 그 상자에서 원래 Dog 객체를 다시 꺼내는 것
+            // 업캐스팅 없이 다운캐스팅:	큰 상자(Animal)에 물건이 없는데 Dog를 꺼내려는 것 (불가능)
             */
 
             Animal myAnima4 = new Dog(); // 업캐스팅
