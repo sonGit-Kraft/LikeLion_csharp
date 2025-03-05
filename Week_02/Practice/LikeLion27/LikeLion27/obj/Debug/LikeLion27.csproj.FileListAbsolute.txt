@@ -1,0 +1,7 @@
+C:\LikeLion\LikeLion\LikeLion27\LikeLion27\bin\Debug\LikeLion27.exe.config
+C:\LikeLion\LikeLion\LikeLion27\LikeLion27\bin\Debug\LikeLion27.exe
+C:\LikeLion\LikeLion\LikeLion27\LikeLion27\bin\Debug\LikeLion27.pdb
+C:\LikeLion\LikeLion\LikeLion27\LikeLion27\obj\Debug\LikeLion27.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\LikeLion27\LikeLion27\obj\Debug\LikeLion27.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\LikeLion27\LikeLion27\obj\Debug\LikeLion27.exe
+C:\LikeLion\LikeLion\LikeLion27\LikeLion27\obj\Debug\LikeLion27.pdb
