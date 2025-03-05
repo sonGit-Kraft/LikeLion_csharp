@@ -22,7 +22,7 @@ namespace LikeLion24
 
         public void Render2()
         {
-            Console.WriteLine($"직없은 {job} 입니다.");
+            Console.WriteLine($"직업은 {job} 입니다.");
         }
     }
 
