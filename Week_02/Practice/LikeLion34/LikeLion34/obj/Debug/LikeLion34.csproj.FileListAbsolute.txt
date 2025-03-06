@@ -1,0 +1,7 @@
+C:\LikeLion\LikeLion\LikeLion34\LikeLion34\bin\Debug\LikeLion34.exe.config
+C:\LikeLion\LikeLion\LikeLion34\LikeLion34\bin\Debug\LikeLion34.exe
+C:\LikeLion\LikeLion\LikeLion34\LikeLion34\bin\Debug\LikeLion34.pdb
+C:\LikeLion\LikeLion\LikeLion34\LikeLion34\obj\Debug\LikeLion34.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\LikeLion34\LikeLion34\obj\Debug\LikeLion34.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\LikeLion34\LikeLion34\obj\Debug\LikeLion34.exe
+C:\LikeLion\LikeLion\LikeLion34\LikeLion34\obj\Debug\LikeLion34.pdb

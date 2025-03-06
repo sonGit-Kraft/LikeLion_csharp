@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\LikeLion\\LikeLion\\LikeLion34\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9B5876C4-0B8F-4167-98D0-EAF39E0F215B}|LikeLion34\\LikeLion34.csproj|c:\\likelion\\likelion\\likelion34\\likelion34\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B5876C4-0B8F-4167-98D0-EAF39E0F215B}|LikeLion34\\LikeLion34.csproj|solutionrelative:likelion34\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\LikeLion\\LikeLion\\LikeLion34\\LikeLion34\\Program.cs",
+              "RelativeDocumentMoniker": "LikeLion34\\Program.cs",
+              "ToolTip": "C:\\LikeLion\\LikeLion\\LikeLion34\\LikeLion34\\Program.cs*",
+              "RelativeToolTip": "LikeLion34\\Program.cs*",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T00:34:42.249Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
