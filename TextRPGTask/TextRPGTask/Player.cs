@@ -11,7 +11,7 @@ namespace TextRPGTask
         public void ShowInfo()
         {
             Console.WriteLine("==========================");
-            Console.WriteLine("플레이어 이름: " + Name);
+            Console.WriteLine("직업 이름: " + Name);
             Console.WriteLine("체력: " + Hp + "\t공격력: " + Attack);
             Console.WriteLine();
         }
@@ -19,6 +19,7 @@ namespace TextRPGTask
         public void SelectJob()
         {
             Console.Clear();
+            Console.WriteLine("직업을 선택하세요.\n");
             Console.WriteLine("1. 기사 2. 마법사 3. 도적");
             Console.Write("선택: ");
             int choice = int.Parse(Console.ReadLine());

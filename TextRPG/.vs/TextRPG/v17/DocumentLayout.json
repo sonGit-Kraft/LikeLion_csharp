@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\LikeLion\\LikeLion\\TextRPG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6FBF051-2CE4-4FAE-9FDE-EFBD7BD01723}|TextRPG\\TextRPG.csproj|C:\\LikeLion\\LikeLion\\TextRPG\\textrpg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6FBF051-2CE4-4FAE-9FDE-EFBD7BD01723}|TextRPG\\TextRPG.csproj|c:\\likelion\\likelion\\textrpg\\textrpg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6FBF051-2CE4-4FAE-9FDE-EFBD7BD01723}|TextRPG\\TextRPG.csproj|solutionrelative:textrpg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,7 +23,7 @@
       "RelativeMoniker": "D:0:0:{A6FBF051-2CE4-4FAE-9FDE-EFBD7BD01723}|TextRPG\\TextRPG.csproj|solutionrelative:textrpg\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6FBF051-2CE4-4FAE-9FDE-EFBD7BD01723}|TextRPG\\TextRPG.csproj|c:\\likelion\\likelion\\textrpg\\textrpg\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6FBF051-2CE4-4FAE-9FDE-EFBD7BD01723}|TextRPG\\TextRPG.csproj|C:\\LikeLion\\LikeLion\\TextRPG\\textrpg\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6FBF051-2CE4-4FAE-9FDE-EFBD7BD01723}|TextRPG\\TextRPG.csproj|solutionrelative:textrpg\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,8 +46,7 @@
               "RelativeToolTip": "TextRPG\\Monster.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T05:03:57.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T05:03:57.173Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "TextRPG\\Field.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T05:02:47.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T05:02:47.764Z"
             },
             {
               "$type": "Document",
@@ -72,8 +70,7 @@
               "RelativeToolTip": "TextRPG\\MainGame.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T04:31:43.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T04:31:43.539Z"
             },
             {
               "$type": "Document",
@@ -85,8 +82,7 @@
               "RelativeToolTip": "TextRPG\\Player.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T04:12:48.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T04:12:48.687Z"
             },
             {
               "$type": "Document",
@@ -98,8 +94,7 @@
               "RelativeToolTip": "TextRPG\\Info.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T04:10:55.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T04:10:55.721Z"
             },
             {
               "$type": "Document",
@@ -109,7 +104,7 @@
               "RelativeDocumentMoniker": "TextRPG\\Program.cs",
               "ToolTip": "C:\\LikeLion\\LikeLion\\TextRPG\\TextRPG\\Program.cs",
               "RelativeToolTip": "TextRPG\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-06T04:05:02.233Z",
               "EditorCaption": ""

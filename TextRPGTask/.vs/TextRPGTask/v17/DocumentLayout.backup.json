@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "C:\\LikeLion\\LikeLion\\TextRPGTask\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|c:\\likelion\\likelion\\textrpgtask\\textrpgtask\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|C:\\LikeLion\\LikeLion\\TextRPGTask\\textrpgtask\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|solutionrelative:textrpgtask\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|c:\\likelion\\likelion\\textrpgtask\\textrpgtask\\gamemain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|solutionrelative:textrpgtask\\gamemain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|C:\\LikeLion\\LikeLion\\TextRPGTask\\textrpgtask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|solutionrelative:textrpgtask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|C:\\LikeLion\\LikeLion\\TextRPGTask\\textrpgtask\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|solutionrelative:textrpgtask\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,20 +23,8 @@
       "RelativeMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|solutionrelative:textrpgtask\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|C:\\LikeLion\\LikeLion\\TextRPGTask\\textrpgtask\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|solutionrelative:textrpgtask\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|C:\\LikeLion\\LikeLion\\TextRPGTask\\textrpgtask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|solutionrelative:textrpgtask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|C:\\LikeLion\\LikeLion\\TextRPGTask\\textrpgtask\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|solutionrelative:textrpgtask\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|C:\\LikeLion\\LikeLion\\TextRPGTask\\textrpgtask\\gamemain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|solutionrelative:textrpgtask\\gamemain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DE3311C-429F-45CC-B284-444EEFA3DA70}|TextRPGTask\\TextRPGTask.csproj|C:\\LikeLion\\LikeLion\\TextRPGTask\\textrpgtask\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -38,24 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\LikeLion\\LikeLion\\TextRPGTask\\TextRPGTask\\Player.cs",
               "RelativeDocumentMoniker": "TextRPGTask\\Player.cs",
-              "ToolTip": "C:\\LikeLion\\LikeLion\\TextRPGTask\\TextRPGTask\\Player.cs",
-              "RelativeToolTip": "TextRPGTask\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\LikeLion\\LikeLion\\TextRPGTask\\TextRPGTask\\Player.cs*",
+              "RelativeToolTip": "TextRPGTask\\Player.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-06T06:08:34.265Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\LikeLion\\LikeLion\\TextRPGTask\\TextRPGTask\\Program.cs",
               "RelativeDocumentMoniker": "TextRPGTask\\Program.cs",
@@ -68,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Unit.cs",
               "DocumentMoniker": "C:\\LikeLion\\LikeLion\\TextRPGTask\\TextRPGTask\\Unit.cs",
               "RelativeDocumentMoniker": "TextRPGTask\\Unit.cs",
@@ -76,37 +76,37 @@
               "RelativeToolTip": "TextRPGTask\\Unit.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T07:03:19.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T07:03:19.034Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Field.cs",
               "DocumentMoniker": "C:\\LikeLion\\LikeLion\\TextRPGTask\\TextRPGTask\\Field.cs",
               "RelativeDocumentMoniker": "TextRPGTask\\Field.cs",
               "ToolTip": "C:\\LikeLion\\LikeLion\\TextRPGTask\\TextRPGTask\\Field.cs",
               "RelativeToolTip": "TextRPGTask\\Field.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwDIAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-06T07:43:10.099Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "GameMain.cs",
               "DocumentMoniker": "C:\\LikeLion\\LikeLion\\TextRPGTask\\TextRPGTask\\GameMain.cs",
               "RelativeDocumentMoniker": "TextRPGTask\\GameMain.cs",
               "ToolTip": "C:\\LikeLion\\LikeLion\\TextRPGTask\\TextRPGTask\\GameMain.cs",
               "RelativeToolTip": "TextRPGTask\\GameMain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T07:18:21.638Z"
+              "WhenOpened": "2025-03-06T07:18:21.638Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Monster.cs",
               "DocumentMoniker": "C:\\LikeLion\\LikeLion\\TextRPGTask\\TextRPGTask\\Monster.cs",
               "RelativeDocumentMoniker": "TextRPGTask\\Monster.cs",
@@ -114,8 +114,7 @@
               "RelativeToolTip": "TextRPGTask\\Monster.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T06:08:47.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T06:08:47.372Z"
             },
             {
               "$type": "Document",

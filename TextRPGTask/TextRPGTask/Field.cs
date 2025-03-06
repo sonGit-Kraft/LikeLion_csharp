@@ -59,7 +59,7 @@ namespace TextRPGTask
             switch (choice)
             {
                 case 1:
-                    monster.Name = "초보 몬스터";
+                    monster.Name = "초급 몬스터";
                     monster.Hp = 30;
                     monster.Attack = 3;
                     break;
@@ -78,7 +78,7 @@ namespace TextRPGTask
 
         static public void DrawChoiceMap()
         {
-            Console.WriteLine("1. 초보 맵 2. 중수 맵 3. 고수 맵 4. 전 단계");
+            Console.WriteLine("1. 초급 맵 2. 중수 맵 3. 고수 맵 4. 전 단계");
             Console.WriteLine("===========================================");
             Console.Write("맵을 선택하세요: ");
         }
