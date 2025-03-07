@@ -13,7 +13,7 @@ namespace TaskRPGTest
 
     Field 클래스와 Player 클래스가 모두 internal로 선언되어 있으면, 동일한 프로젝트 내에서는 ref로 문제없이 객체를 전달할 수 있다.
     */
-    static class Field
+    static class Field // 클래스에 public이나 private 선언이 없으면 기본적으로 internal이 적용
     {
         static private Monster monster;
         static public void GoField(ref Player player)
