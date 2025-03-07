@@ -5,3 +5,10 @@ C:\LikeLion\LikeLion\TextRPGTask\TextRPGTask\bin\Debug\TextRPGTask.exe
 C:\LikeLion\LikeLion\TextRPGTask\TextRPGTask\bin\Debug\TextRPGTask.pdb
 C:\LikeLion\LikeLion\TextRPGTask\TextRPGTask\obj\Debug\TextRPGTask.exe
 C:\LikeLion\LikeLion\TextRPGTask\TextRPGTask\obj\Debug\TextRPGTask.pdb
+C:\LikeLion\LikeLion\Week_02\Task\TextRPGTask\TextRPGTask\bin\Debug\TextRPGTask.exe.config
+C:\LikeLion\LikeLion\Week_02\Task\TextRPGTask\TextRPGTask\bin\Debug\TextRPGTask.exe
+C:\LikeLion\LikeLion\Week_02\Task\TextRPGTask\TextRPGTask\bin\Debug\TextRPGTask.pdb
+C:\LikeLion\LikeLion\Week_02\Task\TextRPGTask\TextRPGTask\obj\Debug\TextRPGTask.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\Week_02\Task\TextRPGTask\TextRPGTask\obj\Debug\TextRPGTask.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\Week_02\Task\TextRPGTask\TextRPGTask\obj\Debug\TextRPGTask.exe
+C:\LikeLion\LikeLion\Week_02\Task\TextRPGTask\TextRPGTask\obj\Debug\TextRPGTask.pdb

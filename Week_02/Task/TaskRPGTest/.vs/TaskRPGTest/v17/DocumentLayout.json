@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\LikeLion\\LikeLion\\TaskRPGTest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E2E081F4-29C1-40CE-BF00-76229EB21169}|TaskRPGTest\\TaskRPGTest.csproj|c:\\likelion\\likelion\\taskrpgtest\\taskrpgtest\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2E081F4-29C1-40CE-BF00-76229EB21169}|TaskRPGTest\\TaskRPGTest.csproj|solutionrelative:taskrpgtest\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2E081F4-29C1-40CE-BF00-76229EB21169}|TaskRPGTest\\TaskRPGTest.csproj|C:\\LikeLion\\LikeLion\\TaskRPGTest\\taskrpgtest\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2E081F4-29C1-40CE-BF00-76229EB21169}|TaskRPGTest\\TaskRPGTest.csproj|solutionrelative:taskrpgtest\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2E081F4-29C1-40CE-BF00-76229EB21169}|TaskRPGTest\\TaskRPGTest.csproj|C:\\LikeLion\\LikeLion\\TaskRPGTest\\taskrpgtest\\gamemain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2E081F4-29C1-40CE-BF00-76229EB21169}|TaskRPGTest\\TaskRPGTest.csproj|solutionrelative:taskrpgtest\\gamemain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2E081F4-29C1-40CE-BF00-76229EB21169}|TaskRPGTest\\TaskRPGTest.csproj|C:\\LikeLion\\LikeLion\\TaskRPGTest\\taskrpgtest\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2E081F4-29C1-40CE-BF00-76229EB21169}|TaskRPGTest\\TaskRPGTest.csproj|solutionrelative:taskrpgtest\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2E081F4-29C1-40CE-BF00-76229EB21169}|TaskRPGTest\\TaskRPGTest.csproj|C:\\LikeLion\\LikeLion\\TaskRPGTest\\taskrpgtest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2E081F4-29C1-40CE-BF00-76229EB21169}|TaskRPGTest\\TaskRPGTest.csproj|solutionrelative:taskrpgtest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2E081F4-29C1-40CE-BF00-76229EB21169}|TaskRPGTest\\TaskRPGTest.csproj|C:\\LikeLion\\LikeLion\\TaskRPGTest\\taskrpgtest\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2E081F4-29C1-40CE-BF00-76229EB21169}|TaskRPGTest\\TaskRPGTest.csproj|solutionrelative:taskrpgtest\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameMain.cs",
+              "DocumentMoniker": "C:\\LikeLion\\LikeLion\\TaskRPGTest\\TaskRPGTest\\GameMain.cs",
+              "RelativeDocumentMoniker": "TaskRPGTest\\GameMain.cs",
+              "ToolTip": "C:\\LikeLion\\LikeLion\\TaskRPGTest\\TaskRPGTest\\GameMain.cs",
+              "RelativeToolTip": "TaskRPGTest\\GameMain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:03:48.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Field.cs",
+              "DocumentMoniker": "C:\\LikeLion\\LikeLion\\TaskRPGTest\\TaskRPGTest\\Field.cs",
+              "RelativeDocumentMoniker": "TaskRPGTest\\Field.cs",
+              "ToolTip": "C:\\LikeLion\\LikeLion\\TaskRPGTest\\TaskRPGTest\\Field.cs",
+              "RelativeToolTip": "TaskRPGTest\\Field.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAYwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:03:29.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Monster.cs",
+              "DocumentMoniker": "C:\\LikeLion\\LikeLion\\TaskRPGTest\\TaskRPGTest\\Monster.cs",
+              "RelativeDocumentMoniker": "TaskRPGTest\\Monster.cs",
+              "ToolTip": "C:\\LikeLion\\LikeLion\\TaskRPGTest\\TaskRPGTest\\Monster.cs",
+              "RelativeToolTip": "TaskRPGTest\\Monster.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:03:19.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Unit.cs",
+              "DocumentMoniker": "C:\\LikeLion\\LikeLion\\TaskRPGTest\\TaskRPGTest\\Unit.cs",
+              "RelativeDocumentMoniker": "TaskRPGTest\\Unit.cs",
+              "ToolTip": "C:\\LikeLion\\LikeLion\\TaskRPGTest\\TaskRPGTest\\Unit.cs",
+              "RelativeToolTip": "TaskRPGTest\\Unit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:03:11.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\LikeLion\\LikeLion\\TaskRPGTest\\TaskRPGTest\\Player.cs",
+              "RelativeDocumentMoniker": "TaskRPGTest\\Player.cs",
+              "ToolTip": "C:\\LikeLion\\LikeLion\\TaskRPGTest\\TaskRPGTest\\Player.cs",
+              "RelativeToolTip": "TaskRPGTest\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:03:02.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\LikeLion\\LikeLion\\TaskRPGTest\\TaskRPGTest\\Program.cs",
+              "RelativeDocumentMoniker": "TaskRPGTest\\Program.cs",
+              "ToolTip": "C:\\LikeLion\\LikeLion\\TaskRPGTest\\TaskRPGTest\\Program.cs",
+              "RelativeToolTip": "TaskRPGTest\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:02:17.811Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

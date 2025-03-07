@@ -1,0 +1,7 @@
+C:\LikeLion\LikeLion\LikeLion43\LikeLion43\bin\Debug\LikeLion43.exe.config
+C:\LikeLion\LikeLion\LikeLion43\LikeLion43\bin\Debug\LikeLion43.exe
+C:\LikeLion\LikeLion\LikeLion43\LikeLion43\bin\Debug\LikeLion43.pdb
+C:\LikeLion\LikeLion\LikeLion43\LikeLion43\obj\Debug\LikeLion43.csproj.AssemblyReference.cache
+C:\LikeLion\LikeLion\LikeLion43\LikeLion43\obj\Debug\LikeLion43.csproj.CoreCompileInputs.cache
+C:\LikeLion\LikeLion\LikeLion43\LikeLion43\obj\Debug\LikeLion43.exe
+C:\LikeLion\LikeLion\LikeLion43\LikeLion43\obj\Debug\LikeLion43.pdb
