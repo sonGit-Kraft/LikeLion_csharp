@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace TaskRPGTest
 {
+    /*
+    Player 클래스가 internal로 되어 있고, Field 클래스가 public일 때 오류가 발생하는 이유:
+    Player 클래스가 internal이기 때문에, Field 클래스에서 그 Player 객체를 ref로 받으려면 Player 클래스가 외부에서 참조할 수 있어야 하므로 문제가 발생할 수 있다. 
+    이 경우 Player 클래스가 internal이면 외부에서 ref로 접근할 수 없다.
+
+    Field 클래스와 Player 클래스가 모두 internal로 선언되어 있으면, 동일한 프로젝트 내에서는 ref로 문제없이 객체를 전달할 수 있다.
+    */
     static class Field
     {
         static private Monster monster;
@@ -15,7 +22,11 @@ namespace TaskRPGTest
 
             player.ShowInfo();
 
-            monster = new Monster();
+
+            if (monster == null)
+            {
+                monster = new Monster();
+            }
 
             int choice = SelectMap();
 

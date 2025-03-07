@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaskRPGTest
 {
-    static class GameMain
+    static class GameMain // 클래스에 public이나 private 선언이 없으면 기본적으로 internal이 적용
     {
         static public Player player = new Player();
 
