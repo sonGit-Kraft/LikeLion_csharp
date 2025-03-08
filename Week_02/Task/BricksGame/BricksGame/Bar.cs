@@ -19,13 +19,13 @@ namespace BricksGame
         public void Initialize()
         {
             // 공을 잡지 않은 상태로 초기화
-            m_nCatch = 0; 
+            m_nCatch = 0;
 
             // 바의 Y 좌표 (화면에서 수직 위치)
-            m_tBar.nY = 18; 
+            m_tBar.nY = 18;
 
             // 바의 X 좌표
-            m_tBar.nX[0] = 12; m_tBar.nX[1] = 14; m_tBar.nX[2] = 16; 
+            m_tBar.nX[0] = 12; m_tBar.nX[1] = 14; m_tBar.nX[2] = 16;
         }
 
         // 바의 움직임과 공의 상태를 처리
@@ -83,8 +83,6 @@ namespace BricksGame
         }
 
         // 리소스 해제 함수 (구현 X)
-        public void Release()
-        {
-        }
+        public void Release() { }
     }
 }

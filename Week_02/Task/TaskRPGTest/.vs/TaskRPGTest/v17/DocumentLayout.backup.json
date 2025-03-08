@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TaskRPGTest\\Field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TaskRPGTest\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\GameMain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TaskRPGTest\\GameMain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TaskRPGTest\\Field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TaskRPGTest\\Monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\TaskRPGTest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TaskRPGTest\\TaskRPGTest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TaskRPGTest\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TaskRPGTest\\Monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TaskRPGTest.csproj",
               "DocumentMoniker": "C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\TaskRPGTest.csproj",
               "RelativeDocumentMoniker": "TaskRPGTest\\TaskRPGTest.csproj",
@@ -50,8 +50,7 @@
               "RelativeToolTip": "TaskRPGTest\\TaskRPGTest.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-07T10:32:31.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T10:32:31.1Z"
             },
             {
               "$type": "Document",
@@ -61,27 +60,27 @@
               "RelativeDocumentMoniker": "TaskRPGTest\\GameMain.cs",
               "ToolTip": "C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\GameMain.cs",
               "RelativeToolTip": "TaskRPGTest\\GameMain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T05:03:48.21Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Field.cs",
               "DocumentMoniker": "C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Field.cs",
               "RelativeDocumentMoniker": "TaskRPGTest\\Field.cs",
               "ToolTip": "C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Field.cs",
               "RelativeToolTip": "TaskRPGTest\\Field.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAABEAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T05:03:29.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Monster.cs",
               "DocumentMoniker": "C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Monster.cs",
               "RelativeDocumentMoniker": "TaskRPGTest\\Monster.cs",
@@ -94,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Unit.cs",
               "DocumentMoniker": "C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Unit.cs",
               "RelativeDocumentMoniker": "TaskRPGTest\\Unit.cs",
@@ -102,25 +101,24 @@
               "RelativeToolTip": "TaskRPGTest\\Unit.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T05:03:11.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T05:03:11.433Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Player.cs",
               "RelativeDocumentMoniker": "TaskRPGTest\\Player.cs",
               "ToolTip": "C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Player.cs",
               "RelativeToolTip": "TaskRPGTest\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T05:03:02.216Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\LikeLion\\LikeLion\\Week_02\\Task\\TaskRPGTest\\TaskRPGTest\\Program.cs",
               "RelativeDocumentMoniker": "TaskRPGTest\\Program.cs",
@@ -128,8 +126,7 @@
               "RelativeToolTip": "TaskRPGTest\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T05:02:17.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T05:02:17.811Z"
             }
           ]
         }
