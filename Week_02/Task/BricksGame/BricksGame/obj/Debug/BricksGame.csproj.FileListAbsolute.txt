@@ -5,3 +5,10 @@ C:\LikeLion\LikeLion\BricksGame\BricksGame\obj\Debug\BricksGame.csproj.AssemblyR
 C:\LikeLion\LikeLion\BricksGame\BricksGame\obj\Debug\BricksGame.csproj.CoreCompileInputs.cache
 C:\LikeLion\LikeLion\BricksGame\BricksGame\obj\Debug\BricksGame.exe
 C:\LikeLion\LikeLion\BricksGame\BricksGame\obj\Debug\BricksGame.pdb
+C:\LikeLion_Bootcamp_csharp\Week_02\Task\BricksGame\BricksGame\bin\Debug\BricksGame.exe.config
+C:\LikeLion_Bootcamp_csharp\Week_02\Task\BricksGame\BricksGame\bin\Debug\BricksGame.exe
+C:\LikeLion_Bootcamp_csharp\Week_02\Task\BricksGame\BricksGame\bin\Debug\BricksGame.pdb
+C:\LikeLion_Bootcamp_csharp\Week_02\Task\BricksGame\BricksGame\obj\Debug\BricksGame.csproj.AssemblyReference.cache
+C:\LikeLion_Bootcamp_csharp\Week_02\Task\BricksGame\BricksGame\obj\Debug\BricksGame.csproj.CoreCompileInputs.cache
+C:\LikeLion_Bootcamp_csharp\Week_02\Task\BricksGame\BricksGame\obj\Debug\BricksGame.exe
+C:\LikeLion_Bootcamp_csharp\Week_02\Task\BricksGame\BricksGame\obj\Debug\BricksGame.pdb

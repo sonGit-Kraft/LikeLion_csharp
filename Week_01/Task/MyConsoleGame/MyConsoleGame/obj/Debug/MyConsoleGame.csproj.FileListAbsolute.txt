@@ -12,3 +12,10 @@ C:\LikeLion\LikeLion\Week_01\Task\MyConsoleGame\MyConsoleGame\obj\Debug\MyConsol
 C:\LikeLion\LikeLion\Week_01\Task\MyConsoleGame\MyConsoleGame\obj\Debug\MyConsoleGame.csproj.CoreCompileInputs.cache
 C:\LikeLion\LikeLion\Week_01\Task\MyConsoleGame\MyConsoleGame\obj\Debug\MyConsoleGame.exe
 C:\LikeLion\LikeLion\Week_01\Task\MyConsoleGame\MyConsoleGame\obj\Debug\MyConsoleGame.pdb
+C:\LikeLion_Bootcamp_csharp\Week_01\Task\MyConsoleGame\MyConsoleGame\bin\Debug\MyConsoleGame.exe.config
+C:\LikeLion_Bootcamp_csharp\Week_01\Task\MyConsoleGame\MyConsoleGame\bin\Debug\MyConsoleGame.exe
+C:\LikeLion_Bootcamp_csharp\Week_01\Task\MyConsoleGame\MyConsoleGame\bin\Debug\MyConsoleGame.pdb
+C:\LikeLion_Bootcamp_csharp\Week_01\Task\MyConsoleGame\MyConsoleGame\obj\Debug\MyConsoleGame.csproj.AssemblyReference.cache
+C:\LikeLion_Bootcamp_csharp\Week_01\Task\MyConsoleGame\MyConsoleGame\obj\Debug\MyConsoleGame.csproj.CoreCompileInputs.cache
+C:\LikeLion_Bootcamp_csharp\Week_01\Task\MyConsoleGame\MyConsoleGame\obj\Debug\MyConsoleGame.exe
+C:\LikeLion_Bootcamp_csharp\Week_01\Task\MyConsoleGame\MyConsoleGame\obj\Debug\MyConsoleGame.pdb
