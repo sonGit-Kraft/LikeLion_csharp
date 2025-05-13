@@ -1,2 +1,3 @@
 # LikeLion Unity BootCamp
-멋쟁이사자처럼 유니티 부트캠프
+
+This repository contains exercises for learning the fundamentals of C#, along with a C# console game developed to apply these concepts, from the LikeLion Bootcamp.
